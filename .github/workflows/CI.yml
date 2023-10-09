@@ -29,7 +29,8 @@ jobs:
         with:
           components: clippy, rustfmt
           profile: minimal
-          toolchain: nightly
+          toolchain: nightly-2023-09-29
+          override: true
       - name: Cargo ${{ matrix.check }}
         uses: actions-rs/cargo@v1
         with:
