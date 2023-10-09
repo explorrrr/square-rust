@@ -1,0 +1,14 @@
+## File system
+.DS_Store
+
+## Editor
+.idea
+.vscode
+
+## Build
+/target
+/docs
+/doc
+
+## ENV
+.env

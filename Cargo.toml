@@ -1,0 +1,24 @@
+[package]
+name = "square-rust"
+description = "A Rust client library for the Square API."
+version = "0.1.0"
+homepage = "https://github.com/explorrrr/square-rust"
+repository = "https://github.com/explorrrr/square-rust"
+authors = ["Yuuki Takahashi <yuuki.50cent2@gmail.com>"]
+edition = "2021"
+license = "MIT/Apache-2.0"
+keywords = ["Square", "API"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+infer = "0.15.0"
+log = "0.4.20"
+reqwest = { version = "0.11.22", features = ["json", "multipart"] }
+reqwest-middleware = "0.2.3"
+reqwest-retry = "0.3.0"
+retry-policies = "0.2.0"
+rustc_version_runtime = "0.2.1"
+serde = { version = "1.0.188", features = ["derive"] }
+serde_json = "1.0.107"
+tokio = { version = "1.32.0", features = ["full"] }
