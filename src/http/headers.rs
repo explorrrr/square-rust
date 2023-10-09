@@ -45,10 +45,7 @@ impl Default for Headers {
         let mut headers = HashMap::new();
 
         headers.insert(String::from("Content-Type"), String::from("application/json"));
-        headers.insert(
-            String::from("Square-Version"),
-            String::from(config::DEFAULT_API_VERSION.to_string()),
-        );
+        headers.insert(String::from("Square-Version"), config::DEFAULT_API_VERSION.to_string());
         headers.insert(String::from("accept"), String::from("application/json"));
         headers.insert(String::from("user-agent"), SquareHttpClientConfig::default_user_agent());
         headers.insert(String::from("Authorization"), config::get_default_authorization_token());

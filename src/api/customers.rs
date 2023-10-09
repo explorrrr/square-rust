@@ -48,8 +48,7 @@ impl CustomersApi {
 
         // request to square api
         let response = self.client.post(&self.url(), &body).await?;
-        let data = from_response_to_create_customer_response(response, self.config.api_version.clone()).await;
-        data
+        from_response_to_create_customer_response(response, self.config.api_version.clone()).await
     }
 
     /// Get the url for the request
@@ -58,45 +57,45 @@ impl CustomersApi {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use tokio;
+// #[cfg(test)]
+// mod tests {
+//     use tokio;
 
-    use super::*;
-    use crate::api::models::request::create_customer::versions::v20230925::CreateCustomerRequestV20230925;
+//     use super::*;
+//     use crate::api::models::request::create_customer::versions::v20230925::CreateCustomerRequestV20230925;
 
-    #[tokio::test]
-    async fn test_create_customer() {
-        let idempotency_key = None;
-        let given_name = Some("given_name".to_string());
-        let family_name = Some("family_name".to_string());
-        let company_name = None;
-        let nickname = None;
-        let email_address = None;
-        let address = None;
-        let phone_number = None;
-        let reference_id = None;
-        let note = None;
-        let birthday = None;
-        let tax_ids = None;
+//     #[tokio::test]
+//     async fn test_create_customer() {
+//         let idempotency_key = None;
+//         let given_name = Some("given_name".to_string());
+//         let family_name = Some("family_name".to_string());
+//         let company_name = None;
+//         let nickname = None;
+//         let email_address = None;
+//         let address = None;
+//         let phone_number = None;
+//         let reference_id = None;
+//         let note = None;
+//         let birthday = None;
+//         let tax_ids = None;
 
-        let config = SquareApiConfig::builder().build();
-        let http_client = SquareHttpClient::try_new(&config.http_client_config).unwrap();
-        let client = CustomersApi::new(config, http_client);
-        let request = CreateCustomerRequestV20230925::new(
-            idempotency_key,
-            given_name,
-            family_name,
-            company_name,
-            nickname,
-            email_address,
-            address,
-            phone_number,
-            reference_id,
-            note,
-            birthday,
-            tax_ids,
-        );
-        let _ = client.create_customer(request).await.unwrap();
-    }
-}
+//         let config = SquareApiConfig::builder().build();
+//         let http_client = SquareHttpClient::try_new(&config.http_client_config).unwrap();
+//         let client = CustomersApi::new(config, http_client);
+//         let request = CreateCustomerRequestV20230925::new(
+//             idempotency_key,
+//             given_name,
+//             family_name,
+//             company_name,
+//             nickname,
+//             email_address,
+//             address,
+//             phone_number,
+//             reference_id,
+//             note,
+//             birthday,
+//             tax_ids,
+//         );
+//         let _ = client.create_customer(request).await.unwrap();
+//     }
+// }

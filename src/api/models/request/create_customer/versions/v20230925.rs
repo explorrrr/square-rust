@@ -56,6 +56,7 @@ pub struct CreateCustomerRequestV20230925 {
 }
 
 impl CreateCustomerRequestV20230925 {
+    #[allow(clippy::too_many_arguments)]
     pub fn new(
         idempotency_key: Option<String>,
         given_name: Option<String>,
@@ -112,7 +113,7 @@ impl CreateCustomerRequestV20230925 {
 
     /// Converts the CreateCustomerRequestV20230925 into a JSON string.
     pub fn to_body_string(&self) -> String {
-        let mut json_value: Value = serde_json::to_value(&self).unwrap();
+        let mut json_value: Value = serde_json::to_value(self).unwrap();
         CreateCustomerRequestV20230925::remove_nulls(&mut json_value);
         json_value.to_string()
     }
