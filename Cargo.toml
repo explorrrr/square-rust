@@ -1,7 +1,7 @@
 [package]
 name = "square-rust"
 description = "A Rust client library for the Square API."
-version = "0.1.0"
+version = "0.1.1"
 homepage = "https://github.com/explorrrr/square-rust"
 repository = "https://github.com/explorrrr/square-rust"
 documentation = "https://docs.rs/square-rust"
