@@ -1,6 +1,7 @@
 //! ExternalDetails
 
 use serde::{Deserialize, Serialize};
+
 use crate::api::models::money::Money;
 
 /// Stores details about an external payment.
@@ -44,5 +45,5 @@ pub enum ExternalDetailsType {
     /// Restaurant voucher provided by employers to employees to pay for meals
     FoodVoucher,
     /// A type not listed here.
-    Other
+    Other,
 }

@@ -1,11 +1,13 @@
 //! Represents a collection of Request Headers
 
-use crate::config;
-use crate::http::client::config::SquareHttpClientConfig;
-use crate::api::models::api_error::SquareApiError;
+use std::collections::HashMap;
+
 use log::error;
 use reqwest::header::{HeaderMap, HeaderName, HeaderValue};
-use std::collections::HashMap;
+
+use crate::api::models::api_error::SquareApiError;
+use crate::config;
+use crate::http::client::config::SquareHttpClientConfig;
 
 /// A collection of Request Headers
 #[derive(Clone, Debug, Eq, PartialEq)]
@@ -27,7 +29,8 @@ impl Headers {
 
     /// Adds a request header to the collection
     pub fn insert(&mut self, header_name: &str, header_value: &str) -> Option<String> {
-        self.headers.insert(String::from(header_name), String::from(header_value))
+        self.headers
+            .insert(String::from(header_name), String::from(header_value))
     }
 }
 
@@ -42,8 +45,10 @@ impl Default for Headers {
         let mut headers = HashMap::new();
 
         headers.insert(String::from("Content-Type"), String::from("application/json"));
-        headers
-            .insert(String::from("Square-Version"), String::from(config::DEFAULT_API_VERSION.to_string()));
+        headers.insert(
+            String::from("Square-Version"),
+            String::from(config::DEFAULT_API_VERSION.to_string()),
+        );
         headers.insert(String::from("accept"), String::from("application/json"));
         headers.insert(String::from("user-agent"), SquareHttpClientConfig::default_user_agent());
         headers.insert(String::from("Authorization"), config::get_default_authorization_token());
@@ -78,23 +83,31 @@ impl TryFrom<&Headers> for HeaderMap {
 
 #[cfg(test)]
 mod tests {
+    use std::collections::HashMap;
+
+    use reqwest::header::HeaderMap;
+
     use crate::config;
     use crate::http::client::config::SquareHttpClientConfig;
     use crate::http::headers::Headers;
-    use reqwest::header::HeaderMap;
-    use std::collections::HashMap;
 
     #[test]
     fn headers_default() {
         let headers = Headers::default();
-        assert_eq!(headers.headers.get("Content-Type"), Some(&String::from("application/json")));
+        assert_eq!(
+            headers.headers.get("Content-Type"),
+            Some(&String::from("application/json"))
+        );
         assert_eq!(headers.headers.get("Square-Version"), Some(&String::from("2023-09-25")));
         assert_eq!(headers.headers.get("accept"), Some(&String::from("application/json")));
         assert_eq!(
             headers.headers.get("user-agent"),
             Some(&SquareHttpClientConfig::default_user_agent())
         );
-        assert_eq!(headers.headers.get("Authorization"), Some(&config::get_default_authorization_token()));
+        assert_eq!(
+            headers.headers.get("Authorization"),
+            Some(&config::get_default_authorization_token())
+        );
         assert!(headers.has_user_agent());
     }
 
@@ -112,7 +125,10 @@ mod tests {
         let mut headers = Headers::default();
         assert!(!(headers.headers.get("user-agent") == Some(&String::from("some-user-agent"))));
         headers.set_user_agent("some-user-agent");
-        assert_eq!(Some(&String::from("some-user-agent")), headers.headers.get("user-agent"));
+        assert_eq!(
+            Some(&String::from("some-user-agent")),
+            headers.headers.get("user-agent")
+        );
     }
 
     #[test]

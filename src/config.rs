@@ -1,14 +1,15 @@
 //! Configuration for the Square API
 
 use std::env;
+
 use log::warn;
+
 use crate::api::models::api_version::SquareApiVersion;
-use crate::http::client::config::SquareHttpClientConfig;
 use crate::environment::Environment;
+use crate::http::client::config::SquareHttpClientConfig;
 
 const DEFAULT_BASE_URL: &str = "/v2";
 pub(crate) const DEFAULT_API_VERSION: SquareApiVersion = SquareApiVersion::V20230925;
-
 
 /// A builder struct to construct a SquareApiConfig
 #[derive(Default)]
@@ -58,7 +59,10 @@ impl SquareApiConfigBuilder {
             environment: self.environment.clone().unwrap_or_default(),
             api_version: self.api_version.clone().unwrap_or(DEFAULT_API_VERSION),
             http_client_config: self.http_client_config.clone().unwrap_or_default(),
-            access_token: self.access_token.clone().unwrap_or_else(get_default_authorization_token),
+            access_token: self
+                .access_token
+                .clone()
+                .unwrap_or_else(get_default_authorization_token),
             base_url: self.base_url.clone().unwrap_or_else(|| DEFAULT_BASE_URL.to_owned()),
         }
     }
@@ -91,7 +95,7 @@ impl SquareApiConfig {
 }
 
 /// Get the default authorization token from the environment variable SQUARE_API_ACCESS_TOKEN
-pub (crate) fn get_default_authorization_token() -> String {
+pub(crate) fn get_default_authorization_token() -> String {
     format!(
         "Bearer {}",
         env::var("SQUARE_API_ACCESS_TOKEN").unwrap_or_else(|_| {

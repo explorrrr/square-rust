@@ -2,6 +2,7 @@
 
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
+
 use crate::api::models::address::Address;
 use crate::api::models::customer_tax_ids::CustomerTaxIds;
 
@@ -109,14 +110,12 @@ impl CreateCustomerRequestV20230925 {
         }
     }
 
-
     /// Converts the CreateCustomerRequestV20230925 into a JSON string.
     pub fn to_body_string(&self) -> String {
         let mut json_value: Value = serde_json::to_value(&self).unwrap();
         CreateCustomerRequestV20230925::remove_nulls(&mut json_value);
         json_value.to_string()
     }
-
 
     fn remove_nulls(value: &mut Value) {
         match value {
@@ -138,10 +137,10 @@ impl CreateCustomerRequestV20230925 {
 
 #[cfg(test)]
 mod tests {
-    use crate::api::models::country::Country;
+    use serde_json::json;
 
     use super::*;
-    use serde_json::json;
+    use crate::api::models::country::Country;
 
     #[test]
     fn test_full_serialization() {
@@ -172,7 +171,9 @@ mod tests {
             reference_id: Some("ref123".to_string()),
             note: Some("This is a note.".to_string()),
             birthday: Some("1990-01-01".to_string()),
-            tax_ids: Some(vec![CustomerTaxIds { eu_vat: Some("EU123456".to_string()) }]),
+            tax_ids: Some(vec![CustomerTaxIds {
+                eu_vat: Some("EU123456".to_string()),
+            }]),
         };
 
         let serialized = request.to_body_string();
@@ -202,7 +203,8 @@ mod tests {
                     "eu_vat": "EU123456"
                 }
             ]
-        }).to_string();
+        })
+        .to_string();
 
         assert_eq!(serialized, expected);
     }

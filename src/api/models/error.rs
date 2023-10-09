@@ -1,6 +1,6 @@
 //! Models for errors returned by the Connect API.
 
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 /// Represents an error encountered during a request to the Connect API.
 #[derive(Debug, Serialize, Deserialize, Clone)]
