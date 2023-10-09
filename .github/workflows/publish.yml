@@ -18,7 +18,7 @@ jobs:
       with:
         profile: minimal
         toolchain: nightly-2023-09-29
-          override: true
+        override: true
 
     - name: Publish to Crates.io
       uses: actions-rs/cargo@v1
