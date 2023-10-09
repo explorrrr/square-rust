@@ -99,7 +99,10 @@ impl SquareHttpClientConfigBuilder {
     pub fn build(&self) -> SquareHttpClientConfig {
         SquareHttpClientConfig {
             timeout: self.timeout.unwrap_or(DEFAULT_TIMEOUT),
-            user_agent: self.user_agent.clone().unwrap_or_else(SquareHttpClientConfig::default_user_agent),
+            user_agent: self
+                .user_agent
+                .clone()
+                .unwrap_or_else(SquareHttpClientConfig::default_user_agent),
             default_headers: self.default_headers.clone().unwrap_or_default(),
             retry_configuration: self.retry_configuration.clone().unwrap_or_default(),
         }
@@ -140,17 +143,16 @@ impl Default for SquareHttpClientConfig {
 
 #[cfg(test)]
 mod tests {
-    use crate::http::client::config::{SquareHttpClientConfig, RetryConfig};
+    use crate::http::client::config::{RetryConfig, SquareHttpClientConfig};
     use crate::http::headers::Headers;
 
     #[test]
     fn http_client_configuration_new_with_default_headers() {
-        let http_client_configuration =
-            SquareHttpClientConfig::builder()
-                .timeout(15)
-                .user_agent(String::from("some_user_agent"))
-                .default_headers(Headers::default())
-                .build();
+        let http_client_configuration = SquareHttpClientConfig::builder()
+            .timeout(15)
+            .user_agent(String::from("some_user_agent"))
+            .default_headers(Headers::default())
+            .build();
         assert_eq!(15, http_client_configuration.timeout);
         assert_eq!(String::from("some_user_agent"), http_client_configuration.user_agent);
         assert_eq!(Headers::default(), http_client_configuration.default_headers);
@@ -159,12 +161,11 @@ mod tests {
 
     #[test]
     fn http_client_configuration_new_with_different_user_agent_in_headers() {
-        let http_client_configuration =
-            SquareHttpClientConfig::builder()
-                .timeout(15)
-                .user_agent(String::from("some_user_agent"))
-                .retry_configuration(RetryConfig::default())
-                .build();
+        let http_client_configuration = SquareHttpClientConfig::builder()
+            .timeout(15)
+            .user_agent(String::from("some_user_agent"))
+            .retry_configuration(RetryConfig::default())
+            .build();
         assert_eq!(15, http_client_configuration.timeout);
         assert_eq!(String::from("some_user_agent"), http_client_configuration.user_agent);
         assert_eq!(Headers::default(), http_client_configuration.default_headers);

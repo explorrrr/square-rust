@@ -1,6 +1,7 @@
 //! Address — A physical address.
 
 use serde::{Deserialize, Serialize};
+
 use crate::api::models::country::Country;
 
 /// Represents a physical address.

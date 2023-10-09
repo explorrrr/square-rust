@@ -1,4 +1,5 @@
 //! Square API version enum
+use std::fmt;
 
 /// Square API version
 #[derive(Debug, Clone)]
@@ -6,11 +7,10 @@ pub enum SquareApiVersion {
     V20230925,
 }
 
-impl SquareApiVersion {
-    /// Convert the SquareApiVersion to a string
-    pub fn to_string(&self) -> String {
+impl fmt::Display for SquareApiVersion {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         match self {
-            SquareApiVersion::V20230925 => "2023-09-25".to_string(),
+            SquareApiVersion::V20230925 => write!(f, "2023-09-25"),
         }
     }
 }

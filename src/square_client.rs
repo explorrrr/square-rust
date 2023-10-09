@@ -1,9 +1,9 @@
 //! The SquareApiClient is the main entry point for making requests to the Square API
 
+use crate::api::customers::CustomersApi;
+use crate::api::models::api_error::SquareApiError;
 use crate::config::SquareApiConfig;
 use crate::http::client::http_client::SquareHttpClient;
-use crate::api::models::api_error::SquareApiError;
-use crate::api::customers::CustomersApi;
 
 /// The SquareApiClient is the main entry point for making requests to the Square API
 pub struct SquareApiClient {
@@ -35,7 +35,7 @@ impl SquareApiClient {
     ///   .access_token("access_token".to_string())
     ///   .build();
     /// ```
-    pub fn try_new(config: Option<SquareApiConfig>, ) -> Result<Self, SquareApiError> {
+    pub fn try_new(config: Option<SquareApiConfig>) -> Result<Self, SquareApiError> {
         let config = config.unwrap_or_else(|| SquareApiConfig::builder().build());
         let http_client = SquareHttpClient::try_new(&config.http_client_config)?;
         Ok(SquareApiClient {

@@ -5,16 +5,15 @@ use std::io::Read;
 use std::{fmt::Debug, time::Duration};
 
 use log::error;
-use reqwest::Response;
 use reqwest::multipart::{self, Part};
+use reqwest::Response;
 use reqwest_middleware::{ClientBuilder, ClientWithMiddleware};
 use reqwest_retry::policies::ExponentialBackoff;
-use retry_policies::Jitter;
 use reqwest_retry::RetryTransientMiddleware;
+use retry_policies::Jitter;
 
-use crate::http::client::config::{SquareHttpClientConfig ,RetryConfig};
 use crate::api::models::api_error::SquareApiError;
-
+use crate::http::client::config::{RetryConfig, SquareHttpClientConfig};
 
 /// HTTP Client to send HTTP Requests and read the responses.
 #[derive(Clone, Debug)]
@@ -41,10 +40,7 @@ impl SquareHttpClient {
         let retry_client = ClientBuilder::new(client.clone())
             .with(RetryTransientMiddleware::new_with_policy(retry_policy))
             .build();
-        Ok(Self {
-            client,
-            retry_client,
-        })
+        Ok(Self { client, retry_client })
     }
 
     /// Sends an HTTP GET
@@ -58,30 +54,26 @@ impl SquareHttpClient {
     }
 
     /// Sends an HTTP POST
-    pub async fn post(
-        &self,
-        url: &str,
-        body: &str,
-    ) -> Result<Response, SquareApiError> {
+    pub async fn post(&self, url: &str, body: &str) -> Result<Response, SquareApiError> {
         let body_string = body.to_string();
-        let response = self.retry_client.post(url).body(body_string).send().await.map_err(|e| {
-            let msg = format!("Error posting to {}: {}", url, e);
-            error!("{}", msg);
-            SquareApiError::new(&msg)
-        })?;
+        let response = self
+            .retry_client
+            .post(url)
+            .body(body_string)
+            .send()
+            .await
+            .map_err(|e| {
+                let msg = format!("Error posting to {}: {}", url, e);
+                error!("{}", msg);
+                SquareApiError::new(&msg)
+            })?;
         Ok(response)
     }
 
     /// Sends an HTTP POST with multipart form data
-    pub async fn post_multipart(
-        &self,
-        url: &str,
-        body: &str,
-        filepath: &str,
-    ) -> Result<Response, SquareApiError> {
+    pub async fn post_multipart(&self, url: &str, body: &str, filepath: &str) -> Result<Response, SquareApiError> {
         let request = serde_json::to_string(body).map_err(|e| {
-            let msg =
-                format!("Error serializing request body - url: {}, body: {:?}: {}", url, body, e);
+            let msg = format!("Error serializing request body - url: {}, body: {:?}: {}", url, body, e);
             error!("{}", msg);
             SquareApiError::new(&msg)
         })?;
@@ -135,15 +127,9 @@ impl SquareHttpClient {
     }
 
     /// Sends an HTTP PUT with multipart form data
-    pub async fn put_multipart(
-        &self,
-        url: &str,
-        body: &str,
-        filepath: &str,
-    ) -> Result<Response, SquareApiError> {
+    pub async fn put_multipart(&self, url: &str, body: &str, filepath: &str) -> Result<Response, SquareApiError> {
         let request = serde_json::to_string(body).map_err(|e| {
-            let msg =
-                format!("Error serializing request body - url: {}, body: {:?}: {}", url, body, e);
+            let msg = format!("Error serializing request body - url: {}, body: {:?}: {}", url, body, e);
             error!("{}", msg);
             SquareApiError::new(&msg)
         })?;
@@ -189,7 +175,10 @@ impl SquareHttpClient {
 /// Creates a retry policy based on the provided `RetryConfig`
 fn create_retry_policy(retry_configuration: &RetryConfig) -> ExponentialBackoff {
     ExponentialBackoff::builder()
-        .retry_bounds(retry_configuration.min_retry_interval, retry_configuration.max_retry_interval)
+        .retry_bounds(
+            retry_configuration.min_retry_interval,
+            retry_configuration.max_retry_interval,
+        )
         .jitter(Jitter::Bounded)
         .build_with_max_retries(retry_configuration.retries_count)
 }

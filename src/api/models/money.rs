@@ -1,6 +1,7 @@
 //! Money
 
 use serde::{Deserialize, Serialize};
+
 use crate::api::models::currency::Currency;
 
 /// Represents an amount of money.
