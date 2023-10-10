@@ -5,7 +5,7 @@ use std::collections::HashMap;
 use log::error;
 use reqwest::header::{HeaderMap, HeaderName, HeaderValue};
 
-use crate::api::models::api_error::SquareApiError;
+use crate::api::models::objects::api_error::SquareApiError;
 use crate::config;
 use crate::http::client::config::SquareHttpClientConfig;
 

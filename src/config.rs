@@ -4,7 +4,7 @@ use std::env;
 
 use log::warn;
 
-use crate::api::models::api_version::SquareApiVersion;
+use crate::api::models::enums::api_version::SquareApiVersion;
 use crate::environment::Environment;
 use crate::http::client::config::SquareHttpClientConfig;
 

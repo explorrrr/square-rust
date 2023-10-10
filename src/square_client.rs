@@ -1,7 +1,7 @@
 //! The SquareApiClient is the main entry point for making requests to the Square API
 
 use crate::api::customers::CustomersApi;
-use crate::api::models::api_error::SquareApiError;
+use crate::api::models::objects::api_error::SquareApiError;
 use crate::config::SquareApiConfig;
 use crate::http::client::http_client::SquareHttpClient;
 

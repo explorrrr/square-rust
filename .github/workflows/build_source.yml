@@ -1,0 +1,27 @@
+name: Auto ZIP and Upload to Release
+
+on:
+  release:
+    types:
+      - created
+
+jobs:
+  zip_and_upload:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: ZIP the code
+      run: zip -r source_code.zip . -x '*.git*'
+
+    - name: Upload ZIP to release
+      uses: actions/upload-release-asset@v1
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./source_code.zip
+        asset_name: source_code.zip
+        asset_content_type: application/zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

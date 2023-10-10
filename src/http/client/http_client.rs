@@ -12,7 +12,7 @@ use reqwest_retry::policies::ExponentialBackoff;
 use reqwest_retry::RetryTransientMiddleware;
 use retry_policies::Jitter;
 
-use crate::api::models::api_error::SquareApiError;
+use crate::api::models::objects::api_error::SquareApiError;
 use crate::http::client::config::{RetryConfig, SquareHttpClientConfig};
 
 /// HTTP Client to send HTTP Requests and read the responses.

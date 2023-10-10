@@ -2,8 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::customer::Customer;
-use crate::api::models::error::SquareError;
+use crate::api::models::objects::customer::Customer;
+use crate::api::models::objects::error::SquareError;
 
 /// CreateCustomerResponse for 2023-09-25 api version
 #[derive(Debug, Clone, Serialize, Deserialize)]

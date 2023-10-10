@@ -1,6 +1,6 @@
 //! Represents an error encountered during a request to the Connect API.
 
-use crate::api::models::error::SquareError;
+use crate::api::models::objects::error::SquareError;
 
 /// Represents an error encountered during a request to the Connect API.
 #[derive(Clone, Debug, Default)]
