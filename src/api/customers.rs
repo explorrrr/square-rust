@@ -1,8 +1,8 @@
 //! CustomerApi module
 
 use super::models::response::create_customer::from_response_to_create_customer_response;
-use crate::api::models::objects::api_error::SquareApiError;
 use crate::api::models::enums::api_version::SquareApiVersion;
+use crate::api::models::objects::api_error::SquareApiError;
 use crate::api::models::request::create_customer::versions::v20230925::CreateCustomerRequestV20230925;
 use crate::api::models::request::create_customer::CreateCustomerRequest;
 use crate::api::models::response::create_customer::CreateCustomerResponse;

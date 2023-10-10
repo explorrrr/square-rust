@@ -2,8 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::objects::address::Address;
 use crate::api::models::enums::customer_creation_source::CustomerCreationSource;
+use crate::api::models::objects::address::Address;
 use crate::api::models::objects::customer_preferences::CustomerPreferences;
 use crate::api::models::objects::customer_tax_ids::CustomerTaxIds;
 
