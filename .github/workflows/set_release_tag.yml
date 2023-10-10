@@ -1,0 +1,40 @@
+name: Auto Tag Release
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+
+    - name: Extract version from Cargo.toml
+      run: echo "NEW_VERSION=$(grep 'version =' Cargo.toml | sed 's/version = //;s/"//g')" >> $GITHUB_ENV
+
+    - name: Get existing tags
+      id: get_tags
+      run: echo "::set-output name=tags::$(curl -s https://api.github.com/repos/${{ github.repository }}/tags | jq -r '.[].name')"
+
+    - name: Check if tag exists
+      id: check_tag
+      run: echo "::set-output name=exists::$(echo '${{ steps.get_tags.outputs.tags }}' | grep -q -w ${{ env.NEW_VERSION }} && echo 'true' || echo 'false')"
+
+    - name: Create GitHub Release
+      if: steps.check_tag.outputs.exists == 'false'
+      uses: actions/create-release@v1
+      with:
+        tag_name: ${{ env.NEW_VERSION }}
+        release_name: Release ${{ env.NEW_VERSION }}
+        body: 'New release ${{ env.NEW_VERSION }}'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
