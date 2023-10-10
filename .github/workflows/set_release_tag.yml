@@ -19,8 +19,14 @@ jobs:
         toolchain: nightly-2023-09-29
         override: true
 
-    - name: Extract version from Cargo.toml
-      run: echo "NEW_VERSION=$(grep 'version =' Cargo.toml | sed 's/version = //;s/"//g')" >> $GITHUB_ENV
+    - name: Install Rust dependencies
+      run: cargo install toml
+
+    - name: Run Rust script to extract version
+      run: rustc extract_version.rs && ./extract_version > version.txt
+
+    - name: Set version as env variable
+      run: echo "NEW_VERSION=$(cat version.txt)" >> $GITHUB_ENV
 
     - name: Get existing tags
       id: get_tags
