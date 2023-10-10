@@ -7,9 +7,9 @@ use std::any::Any;
 use reqwest::Error;
 use reqwest::Response;
 
-use crate::api::models::api_version::SquareApiVersion;
+use crate::api::models::enums::api_version::SquareApiVersion;
 use crate::api::models::{
-    api_error::SquareApiError, error_response::ErrorResponse,
+    objects::api_error::SquareApiError, objects::error_response::ErrorResponse,
     response::create_customer::versions::v20230925::CreateCustomerResponseV20230925,
 };
 

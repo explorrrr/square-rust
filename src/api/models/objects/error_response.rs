@@ -2,7 +2,7 @@
 
 use serde::Deserialize;
 
-use crate::api::models::error::SquareError;
+use crate::api::models::objects::error::SquareError;
 
 /// A generic error response from the Square API.
 #[derive(Clone, Deserialize)]

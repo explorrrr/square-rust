@@ -2,7 +2,7 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::currency::Currency;
+use crate::api::models::enums::currency::Currency;
 
 /// Represents an amount of money.
 /// Money fields can be signed or unsigned. Fields that do not explicitly define whether they are signed or unsigned are considered unsigned and can only hold positive amounts.

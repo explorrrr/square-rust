@@ -1,6 +1,6 @@
 //! CashDetails
 
-use crate::api::models::money::Money;
+use crate::api::models::objects::money::Money;
 
 /// Represents the details of a cash payment.
 pub struct CashDetails {

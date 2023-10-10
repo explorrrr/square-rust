@@ -2,7 +2,7 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::country::Country;
+use crate::api::models::enums::country::Country;
 
 /// Represents a physical address.
 #[derive(Debug, Clone, Serialize, Deserialize)]

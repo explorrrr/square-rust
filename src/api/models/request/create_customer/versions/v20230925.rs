@@ -3,8 +3,8 @@
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
-use crate::api::models::address::Address;
-use crate::api::models::customer_tax_ids::CustomerTaxIds;
+use crate::api::models::objects::address::Address;
+use crate::api::models::objects::customer_tax_ids::CustomerTaxIds;
 
 /// Creates a new customer for a business. For api version 2023-09-25
 
@@ -141,7 +141,7 @@ mod tests {
     use serde_json::json;
 
     use super::*;
-    use crate::api::models::country::Country;
+    use crate::api::models::enums::country::Country;
 
     #[test]
     fn test_full_serialization() {
