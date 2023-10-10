@@ -15,27 +15,31 @@
     // The optional 'workspaceFolder' property is the path VS Code should open by default when
     // connected. This is typically a file mount in .devcontainer/docker-compose.yml
     "workspaceFolder": "/app",
-    // Set *default* container specific settings.json values on container create.
-    "settings": {
-        "terminal.integrated.defaultProfile.linux": "bash",
-        "rust-analyzer.linkedProjects": [
-            "/app/Cargo.toml"
-        ]
-    },
-    // Add the IDs of extensions you want installed when the container is created.
-    "extensions": [
-        "rust-lang.rust-analyzer",
-        "coenraads.bracket-pair-colorizer-2",
-        "formulahendry.auto-close-tag",
-        "christian-kohler.path-intellisense",
-        "k--kato.intellij-idea-keybindings",
-        "yzhang.markdown-all-in-one",
-        "ms-azuretools.vscode-docker",
-        "bungcip.better-toml",
-        "github.copilot-labs",
-        "GitHub.copilot",
-        "github.vscode-pull-request-github"
-    ]
+    "customizations": {
+        "vscode": {
+            // Set *default* container specific settings.json values on container create.
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "rust-analyzer.linkedProjects": [
+                    "/app/Cargo.toml"
+                ]
+            },
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "coenraads.bracket-pair-colorizer-2",
+                "formulahendry.auto-close-tag",
+                "christian-kohler.path-intellisense",
+                "k--kato.intellij-idea-keybindings",
+                "yzhang.markdown-all-in-one",
+                "ms-azuretools.vscode-docker",
+                "bungcip.better-toml",
+                "github.copilot-labs",
+                "GitHub.copilot",
+                "github.vscode-pull-request-github"
+            ]
+        }
+    }
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
     // Uncomment the next line if you want start specific services in your Docker Compose config.
