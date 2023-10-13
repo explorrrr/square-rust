@@ -5,7 +5,7 @@ use serde::{Deserialize, Serialize};
 /// Indicates the country associated with another entity, such as a business.
 /// Values are in [ISO 3166-1-alpha-2 format](https://www.iso.org/iso-3166-country-codes.html).
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
-#[serde(rename_all = "UPPERCASE")]
+#[serde(rename_all = "SCREAMING_SNAKE_CASE")]
 pub enum Country {
     /// Unknown
     Zz,
