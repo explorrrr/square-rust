@@ -10,7 +10,7 @@ services:
     volumes:
       - .:/app
       - cargo-cache:/usr/local/cargo/registry
-      - target-cache:/app/root/target
+      - target-cache:/app/target
     container_name: square-rust
 
 volumes:

@@ -3,8 +3,8 @@
 use serde::{Deserialize, Serialize};
 use serde_json::Value;
 
-use crate::api::models::objects::address::Address;
-use crate::api::models::objects::customer_tax_ids::CustomerTaxIds;
+use crate::api::models::objects::versions::v20230925::address::AddressV20230925;
+use crate::api::models::objects::versions::v20230925::customer_tax_ids::CustomerTaxIdsV20230925;
 
 /// Creates a new customer for a business. For api version 2023-09-25
 
@@ -36,7 +36,7 @@ pub struct CreateCustomerRequestV20230925 {
     pub email_address: Option<String>,
     /// The physical address associated with the customer profile. For maximum length constraints, see
     /// [Customer addresses](https://developer.squareup.com/docs/customers-api/use-the-api/keep-records#address). The first_name and last_name fields are ignored if they are present in the request.
-    pub address: Option<Address>,
+    pub address: Option<AddressV20230925>,
     /// The phone number associated with the customer profile. The phone number must be valid and can contain 9–16 digits,
     ///  with an optional + prefix and country code. For more information, see [Customer phone numbers](https://developer.squareup.com/docs/customers-api/use-the-api/keep-records#phone-number).
     pub phone_number: Option<String>,
@@ -52,7 +52,7 @@ pub struct CreateCustomerRequestV20230925 {
     /// The tax ID associated with the customer profile. This field is available only for customers of sellers in EU countries
     ///  or the United Kingdom. In other countries, this field is ignored when included in a CreateCustomer request. For
     /// more information, see [Customer tax IDs](https://developer.squareup.com/docs/customers-api/what-it-does#customer-tax-ids).
-    pub tax_ids: Option<Vec<CustomerTaxIds>>,
+    pub tax_ids: Option<Vec<CustomerTaxIdsV20230925>>,
 }
 
 impl CreateCustomerRequestV20230925 {
@@ -64,12 +64,12 @@ impl CreateCustomerRequestV20230925 {
         company_name: Option<String>,
         nickname: Option<String>,
         email_address: Option<String>,
-        address: Option<Address>,
+        address: Option<AddressV20230925>,
         phone_number: Option<String>,
         reference_id: Option<String>,
         note: Option<String>,
         birthday: Option<String>,
-        tax_ids: Option<Vec<CustomerTaxIds>>,
+        tax_ids: Option<Vec<CustomerTaxIdsV20230925>>,
     ) -> CreateCustomerRequestV20230925 {
         CreateCustomerRequestV20230925::validate_required_keys(
             given_name.clone(),
@@ -141,7 +141,7 @@ mod tests {
     use serde_json::json;
 
     use super::*;
-    use crate::api::models::enums::country::Country;
+    use crate::api::models::enums::versions::v20230925::country::CountryV20230925;
 
     #[test]
     fn test_full_serialization() {
@@ -152,7 +152,7 @@ mod tests {
             company_name: Some("Company".to_string()),
             nickname: Some("JD".to_string()),
             email_address: Some("john.doe@example.com".to_string()),
-            address: Some(Address {
+            address: Some(AddressV20230925 {
                 address_line_1: Some("123 Main St".to_string()),
                 address_line_2: Some("Apt 4".to_string()),
                 address_line_3: None,
@@ -164,7 +164,7 @@ mod tests {
                 administrative_district_level_2: None,
                 administrative_district_level_3: None,
                 postal_code: Some("12345".to_string()),
-                country: Some(Country::Us),
+                country: Some(CountryV20230925::Us),
                 first_name: Some("John".to_string()),
                 last_name: Some("Doe".to_string()),
             }),
@@ -172,7 +172,7 @@ mod tests {
             reference_id: Some("ref123".to_string()),
             note: Some("This is a note.".to_string()),
             birthday: Some("1990-01-01".to_string()),
-            tax_ids: Some(vec![CustomerTaxIds {
+            tax_ids: Some(vec![CustomerTaxIdsV20230925 {
                 eu_vat: Some("EU123456".to_string()),
             }]),
         };
