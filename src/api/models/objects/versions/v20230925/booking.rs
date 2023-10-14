@@ -1,13 +1,12 @@
 //! Booking
 
+use serde::{Deserialize, Serialize};
+
+use crate::api::models::enums::versions::v20230925::booking_booking_source::BookingBookingSourceV20230925;
+use crate::api::models::enums::versions::v20230925::booking_status::BookingStatusV20230925;
 use crate::api::models::enums::versions::v20230925::business_appointment_settings_booking_location_type::BusinessAppointmentSettingsBookingLocationTypeV20230925;
 use crate::api::models::objects::versions::v20230925::appointment_segment::AppointmentSegmentV20230925;
-use crate::api::models::enums::versions::v20230925::booking_status::BookingStatusV20230925;
-use crate::api::models::enums::versions::v20230925::booking_booking_source::BookingBookingSourceV20230925;
 use crate::api::models::objects::versions::v20230925::booking_creator_details::BookingCreatorDetailsV20230925;
-
-
-use serde::{Deserialize, Serialize};
 
 /// Represents a booking as a time-bound service contract for a seller's staff member to provide a specified service at a given location to a requesting customer in one or more appointment segments.
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -2,9 +2,14 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{action_cancel_reason::ActionCancelReasonV20230925, checkout_options_payment_type::CheckoutOptionsPaymentTypeV20230925};
-
-use super::{money::MoneyV20230925, payment_options::PaymentOptionsV20230925, device_checkout_options::DeviceCheckoutOptionsV20230925};
+use super::{
+    device_checkout_options::DeviceCheckoutOptionsV20230925, money::MoneyV20230925,
+    payment_options::PaymentOptionsV20230925,
+};
+use crate::api::models::enums::versions::v20230925::{
+    action_cancel_reason::ActionCancelReasonV20230925,
+    checkout_options_payment_type::CheckoutOptionsPaymentTypeV20230925,
+};
 
 /// Represents a checkout processed by the Square Terminal.
 #[derive(Debug, Clone, Serialize, Deserialize)]

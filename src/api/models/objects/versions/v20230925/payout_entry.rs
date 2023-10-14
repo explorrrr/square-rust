@@ -2,9 +2,32 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    money::MoneyV20230925,
+    payment_balance_activity_app_fee_refund_detail::PaymentBalanceActivityAppFeeRefundDetailV20230925,
+    payment_balance_activity_app_fee_revenue_detail::PaymentBalanceActivityAppFeeRevenueDetailV20230925,
+    payment_balance_activity_automatic_savings_detail::PaymentBalanceActivityAutomaticSavingsDetailV20230925,
+    payment_balance_activity_automatic_savings_reversed_detail::PaymentBalanceActivityAutomaticSavingsReversedDetailV20230925,
+    payment_balance_activity_charge_detail::PaymentBalanceActivityChargeDetailV20230925,
+    payment_balance_activity_deposit_fee_detail::PaymentBalanceActivityDepositFeeDetailV20230925,
+    payment_balance_activity_dispute_detail::PaymentBalanceActivityDisputeDetailV20230925,
+    payment_balance_activity_fee_detail::PaymentBalanceActivityFeeDetailV20230925,
+    payment_balance_activity_free_processing_detail::PaymentBalanceActivityFreeProcessingDetailV20230925,
+    payment_balance_activity_hold_adjustment_detail::PaymentBalanceActivityHoldAdjustmentDetailV20230925,
+    payment_balance_activity_open_dispute_detail::PaymentBalanceActivityOpenDisputeDetailV20230925,
+    payment_balance_activity_other_adjustment_detail::PaymentBalanceActivityOtherAdjustmentDetailV20230925,
+    payment_balance_activity_other_detail::PaymentBalanceActivityOtherDetailV20230925,
+    payment_balance_activity_refund_detail::PaymentBalanceActivityRefundDetailV20230925,
+    payment_balance_activity_release_adjustment_detail::PaymentBalanceActivityReleaseAdjustmentDetailV20230925,
+    payment_balance_activity_reserve_hold_detail::PaymentBalanceActivityReserveHoldDetailV20230925,
+    payment_balance_activity_reserve_release_detail::PaymentBalanceActivityReserveReleaseDetailV20230925,
+    payment_balance_activity_square_capital_payment_detail::PaymentBalanceActivitySquareCapitalPaymentDetailV20230925,
+    payment_balance_activity_square_capital_reversed_payment_detail::PaymentBalanceActivitySquareCapitalReversedPaymentDetailV20230925,
+    payment_balance_activity_tax_on_fee_detail::PaymentBalanceActivityTaxOnFeeDetailV20230925,
+    payment_balance_activity_third_party_fee_detail::PaymentBalanceActivityThirdPartyFeeDetailV20230925,
+    payment_balance_activity_third_party_fee_refund_detail::PaymentBalanceActivityThirdPartyFeeRefundDetailV20230925,
+};
 use crate::api::models::enums::versions::v20230925::activity_type::ActivityTypeV20230925;
-
-use super::{money::MoneyV20230925, payment_balance_activity_app_fee_revenue_detail::PaymentBalanceActivityAppFeeRevenueDetailV20230925, payment_balance_activity_app_fee_refund_detail::PaymentBalanceActivityAppFeeRefundDetailV20230925, payment_balance_activity_automatic_savings_detail::PaymentBalanceActivityAutomaticSavingsDetailV20230925, payment_balance_activity_automatic_savings_reversed_detail::PaymentBalanceActivityAutomaticSavingsReversedDetailV20230925, payment_balance_activity_charge_detail::PaymentBalanceActivityChargeDetailV20230925, payment_balance_activity_deposit_fee_detail::PaymentBalanceActivityDepositFeeDetailV20230925, payment_balance_activity_dispute_detail::PaymentBalanceActivityDisputeDetailV20230925, payment_balance_activity_fee_detail::PaymentBalanceActivityFeeDetailV20230925, payment_balance_activity_free_processing_detail::PaymentBalanceActivityFreeProcessingDetailV20230925, payment_balance_activity_hold_adjustment_detail::PaymentBalanceActivityHoldAdjustmentDetailV20230925, payment_balance_activity_open_dispute_detail::PaymentBalanceActivityOpenDisputeDetailV20230925, payment_balance_activity_other_detail::PaymentBalanceActivityOtherDetailV20230925, payment_balance_activity_other_adjustment_detail::PaymentBalanceActivityOtherAdjustmentDetailV20230925, payment_balance_activity_refund_detail::PaymentBalanceActivityRefundDetailV20230925, payment_balance_activity_release_adjustment_detail::PaymentBalanceActivityReleaseAdjustmentDetailV20230925, payment_balance_activity_reserve_hold_detail::PaymentBalanceActivityReserveHoldDetailV20230925, payment_balance_activity_reserve_release_detail::PaymentBalanceActivityReserveReleaseDetailV20230925, payment_balance_activity_square_capital_payment_detail::PaymentBalanceActivitySquareCapitalPaymentDetailV20230925, payment_balance_activity_square_capital_reversed_payment_detail::PaymentBalanceActivitySquareCapitalReversedPaymentDetailV20230925, payment_balance_activity_tax_on_fee_detail::PaymentBalanceActivityTaxOnFeeDetailV20230925, payment_balance_activity_third_party_fee_detail::PaymentBalanceActivityThirdPartyFeeDetailV20230925, payment_balance_activity_third_party_fee_refund_detail::PaymentBalanceActivityThirdPartyFeeRefundDetailV20230925};
 
 /// One or more `PayoutEntry` objects that make up a `Payout`.
 ///
@@ -71,7 +94,8 @@ pub struct PayoutEntryV20230925 {
     /// Details of capital merchant cash advance (MCA) assessments. These are, generally, proportional to the merchant's sales but may be issued for other reasons related to the MCA.
     pub type_square_capital_payment_details: Option<PaymentBalanceActivitySquareCapitalPaymentDetailV20230925>,
     /// Details of capital merchant cash advance (MCA) assessment refunds. These are, generally, proportional to the merchant's refunds but may be issued for other reasons related to the MCA.
-    pub type_square_capital_reversed_payment_details: Option<PaymentBalanceActivitySquareCapitalReversedPaymentDetailV20230925>,
+    pub type_square_capital_reversed_payment_details:
+        Option<PaymentBalanceActivitySquareCapitalReversedPaymentDetailV20230925>,
     /// Details of tax paid on fee amounts.
     pub type_tax_on_fee_details: Option<PaymentBalanceActivityTaxOnFeeDetailV20230925>,
     /// Details of fees collected by a 3rd party platform.

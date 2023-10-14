@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{order_line_item_pricing_blocklists_blocked_discount::OrderLineItemPricingBlocklistsBlockedDiscountV20230925, order_line_item_pricing_blocklists_blocked_tax::OrderLineItemPricingBlocklistsBlockedTaxV20230925};
+use super::{
+    order_line_item_pricing_blocklists_blocked_discount::OrderLineItemPricingBlocklistsBlockedDiscountV20230925,
+    order_line_item_pricing_blocklists_blocked_tax::OrderLineItemPricingBlocklistsBlockedTaxV20230925,
+};
 
 /// Describes pricing adjustments that are blocked from automatic application to a line item.
 ///

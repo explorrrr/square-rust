@@ -2,9 +2,13 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    money::MoneyV20230925, tender_bank_account_details::TenderBankAccountDetailsV20230925,
+    tender_buy_now_pay_later_details::TenderBuyNowPayLaterDetailsV20230925,
+    tender_card_details::TenderCardDetailsV20230925, tender_cash_details::TenderCashDetailsV20230925,
+    tender_square_account_details::TenderSquareAccountDetailsV20230925,
+};
 use crate::api::models::enums::versions::v20230925::tender_type::TenderTypeV20230925;
-
-use super::{money::MoneyV20230925, tender_card_details::TenderCardDetailsV20230925, tender_cash_details::TenderCashDetailsV20230925, tender_bank_account_details::TenderBankAccountDetailsV20230925, tender_buy_now_pay_later_details::TenderBuyNowPayLaterDetailsV20230925, tender_square_account_details::TenderSquareAccountDetailsV20230925};
 
 /// Represents a tender (i.e., a method of payment) used in a Square transaction.
 #[derive(Debug, Clone, Serialize, Deserialize)]

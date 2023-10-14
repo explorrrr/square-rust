@@ -11,5 +11,6 @@ pub struct CatalogCustomAttributeDefinitionSelectionConfigV20230925 {
     /// Max 100
     pub max_allowed_selections: Option<i32>,
     /// The set of valid CatalogCustomAttributeSelections. Up to a maximum of 100 selections can be defined. Can be modified.
-    pub allowed_selections: Option<Vec<CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelectionV20230925>>,
+    pub allowed_selections:
+        Option<Vec<CatalogCustomAttributeDefinitionSelectionConfigCustomAttributeSelectionV20230925>>,
 }

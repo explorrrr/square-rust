@@ -2,9 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{payout_status::PayoutStatusV20230925, payout_type::PayoutTypeV20230925};
-
-use super::{money::MoneyV20230925, destination::DestinationV20230925, payout_fee::PayoutFeeV20230925};
+use super::{destination::DestinationV20230925, money::MoneyV20230925, payout_fee::PayoutFeeV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    payout_status::PayoutStatusV20230925, payout_type::PayoutTypeV20230925,
+};
 
 /// An accounting of the amount owed the seller and record of the actual transfer to their external bank account or to the Square balance.
 #[derive(Debug, Clone, Serialize, Deserialize)]

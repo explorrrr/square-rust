@@ -1,8 +1,8 @@
 //! Availability
 
-use crate::api::models::objects::versions::v20230925::appointment_segment::AppointmentSegmentV20230925;
-
 use serde::{Deserialize, Serialize};
+
+use crate::api::models::objects::versions::v20230925::appointment_segment::AppointmentSegmentV20230925;
 
 /// Defines an appointment slot that encapsulates the appointment segments, location and starting time available for booking.
 #[derive(Debug, Clone, Serialize, Deserialize)]

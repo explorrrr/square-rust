@@ -1,6 +1,7 @@
 //! Models for errors returned by the Connect API.
 
 use serde::{Deserialize, Serialize};
+
 use crate::api::models::enums::error_category::ErrorCategory;
 use crate::api::models::enums::error_code::ErrorCode;
 

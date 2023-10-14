@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{terminal_checkout_query_filter::TerminalCheckoutQueryFilterV20230925, terminal_checkout_query_sort::TerminalCheckoutQuerySortV20230925};
+use super::{
+    terminal_checkout_query_filter::TerminalCheckoutQueryFilterV20230925,
+    terminal_checkout_query_sort::TerminalCheckoutQuerySortV20230925,
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TerminalCheckoutQueryV20230925 {

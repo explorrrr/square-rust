@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::{versions::v20230925::{currency::CurrencyV20230925, country::CountryV20230925, merchant_status::MerchantStatusV20230925}};
+use crate::api::models::enums::versions::v20230925::{
+    country::CountryV20230925, currency::CurrencyV20230925, merchant_status::MerchantStatusV20230925,
+};
 
 /// Represents a business that sells with Square.
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -5,7 +5,6 @@ use serde::{Deserialize, Serialize};
 use crate::api::models::enums::versions::v20230925::tax_calculation_phase::TaxCalculationPhaseV20230925;
 use crate::api::models::enums::versions::v20230925::tax_inclusion_type::TaxInclusionTypeV20230925;
 
-
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CatalogTaxV20230925 {
     /// The tax's name. This is a searchable attribute for use in applicable query filters, and its value length is of Unicode code points.

@@ -2,9 +2,12 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    loyalty_promotion_available_time_data::LoyaltyPromotionAvailableTimeDataV20230925,
+    loyalty_promotion_incentive::LoyaltyPromotionIncentiveV20230925,
+    loyalty_promotion_trigger_limit::LoyaltyPromotionTriggerLimitV20230925, money::MoneyV20230925,
+};
 use crate::api::models::enums::versions::v20230925::loyalty_promotion_status::LoyaltyPromotionStatusV20230925;
-
-use super::{loyalty_promotion_incentive::LoyaltyPromotionIncentiveV20230925, loyalty_promotion_available_time_data::LoyaltyPromotionAvailableTimeDataV20230925, loyalty_promotion_trigger_limit::LoyaltyPromotionTriggerLimitV20230925, money::MoneyV20230925};
 
 /// Represents a promotion for a [loyalty program](https://developer.squareup.com/reference/square/objects/LoyaltyProgram).
 ///

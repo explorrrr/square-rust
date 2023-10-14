@@ -1,14 +1,13 @@
 //! CatalogItemVariation
 
-
 use serde::{Deserialize, Serialize};
 
+use crate::api::models::enums::versions::v20230925::catalog_pricing_type::CatalogPricingTypeV20230925;
 use crate::api::models::enums::versions::v20230925::inventory_alert_type::InventoryAlertTypeV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_item_option_value_for_item_variation::CatalogItemOptionValueForItemVariationV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_stock_conversion::CatalogStockConversionV20230925;
-use crate::api::models::objects::versions::v20230925::money::MoneyV20230925;
 use crate::api::models::objects::versions::v20230925::item_variation_location_overrides::ItemVariationLocationOverridesV20230925;
-use crate::api::models::enums::versions::v20230925::catalog_pricing_type::CatalogPricingTypeV20230925;
+use crate::api::models::objects::versions::v20230925::money::MoneyV20230925;
 
 /// An item variation, representing a product for sale, in the Catalog object model.
 ///

@@ -2,7 +2,13 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{loyalty_envent_loyalty_account_filter::LoyaltyEventLoyaltyAccountFilterV20230925, loyalty_event_type_filter::LoyaltyEventTypeFilterV20230925, loyalty_event_location_filter::LoyaltyEventLocationFilterV20230925, loyalty_event_order_filter::LoyaltyEventOrderFilterV20230925, loyalty_event_date_time_filter::LoyaltyEventDateTimeFilterV20230925};
+use super::{
+    loyalty_envent_loyalty_account_filter::LoyaltyEventLoyaltyAccountFilterV20230925,
+    loyalty_event_date_time_filter::LoyaltyEventDateTimeFilterV20230925,
+    loyalty_event_location_filter::LoyaltyEventLocationFilterV20230925,
+    loyalty_event_order_filter::LoyaltyEventOrderFilterV20230925,
+    loyalty_event_type_filter::LoyaltyEventTypeFilterV20230925,
+};
 
 /// The filtering criteria.
 ///

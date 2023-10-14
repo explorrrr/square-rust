@@ -2,7 +2,7 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{subscription_event_info::SubscriptionEventInfoV20230925, phase::PhaseV20230925};
+use super::{phase::PhaseV20230925, subscription_event_info::SubscriptionEventInfoV20230925};
 
 /// Describes changes to a subscription and the subscription status.
 #[derive(Debug, Clone, Serialize, Deserialize)]

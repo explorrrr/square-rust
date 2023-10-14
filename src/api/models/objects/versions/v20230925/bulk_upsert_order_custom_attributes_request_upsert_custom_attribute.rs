@@ -1,8 +1,8 @@
 //! BulkUpsertOrderCustomAttributesRequestUpsertCustomAttribute
 
+use serde::{Deserialize, Serialize};
 
 use crate::api::models::objects::versions::v20230925::custom_attribute::CustomAttributeV20230925;
-use serde::{Deserialize, Serialize};
 
 /// Represents one upsert within the bulk operation.
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -1,6 +1,5 @@
 //! ArchivedState Enum
 
-
 use serde::{Deserialize, Serialize};
 
 /// Defines the values for the archived_state query expression used in [SearchCatalogItems](https://developer.squareup.com/reference/square/catalog-api/search-catalog-items) to return the archived, not archived or either type of catalog items.

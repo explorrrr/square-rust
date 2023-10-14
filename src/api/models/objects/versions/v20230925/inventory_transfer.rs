@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::inventory_state::InventoryStateV20230925;
-
 use super::source_application::SourceApplicationV20230925;
+use crate::api::models::enums::versions::v20230925::inventory_state::InventoryStateV20230925;
 
 /// Represents a transfer of a quantity of product inventory at a particular time from one location to another.
 #[derive(Debug, Clone, Serialize, Deserialize)]

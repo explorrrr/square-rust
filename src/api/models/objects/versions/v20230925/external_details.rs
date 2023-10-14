@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::external_details_type::ExternalDetailsTypeV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::external_details_type::ExternalDetailsTypeV20230925;
 
 /// Stores details about an external payment.
 #[derive(Debug, Clone, Serialize, Deserialize)]

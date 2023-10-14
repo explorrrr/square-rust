@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::exclude_strategy::ExcludeStrategyV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::exclude_strategy::ExcludeStrategyV20230925;
 
 /// Defines how discounts are automatically applied to a set of items that match the pricing rule during the active time period.
 #[derive(Debug, Clone, Serialize, Deserialize)]

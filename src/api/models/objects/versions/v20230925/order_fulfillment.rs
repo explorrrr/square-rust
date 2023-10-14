@@ -4,9 +4,16 @@ use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{order_fulfillment_type::OrderFulfillmentTypeV20230925, order_fulfillment_state::OrderFulfillmentStateV20230925, order_fulfillment_fulfillment_line_item_application::OrderFulfillmentFulfillmentLineItemApplicationV20230925};
-
-use super::{order_fulfillment_fulfillment_entry::OrderFulfillmentFulfillmentEntryV20230925, order_fulfillment_pickup_details::OrderFulfillmentPickupDetailsV20230925, order_fulfillment_shipment_details::OrderFulfillmentShipmentDetailsV20230925, order_fulfillment_delivery_details::OrderFulfillmentDeliveryDetailsV20230925};
+use super::{
+    order_fulfillment_delivery_details::OrderFulfillmentDeliveryDetailsV20230925,
+    order_fulfillment_fulfillment_entry::OrderFulfillmentFulfillmentEntryV20230925,
+    order_fulfillment_pickup_details::OrderFulfillmentPickupDetailsV20230925,
+    order_fulfillment_shipment_details::OrderFulfillmentShipmentDetailsV20230925,
+};
+use crate::api::models::enums::versions::v20230925::{
+    order_fulfillment_fulfillment_line_item_application::OrderFulfillmentFulfillmentLineItemApplicationV20230925,
+    order_fulfillment_state::OrderFulfillmentStateV20230925, order_fulfillment_type::OrderFulfillmentTypeV20230925,
+};
 
 /// Contains details about how to fulfill this order.
 ///

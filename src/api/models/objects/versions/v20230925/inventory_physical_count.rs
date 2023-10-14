@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::inventory_state::InventoryStateV20230925;
-
 use super::source_application::SourceApplicationV20230925;
+use crate::api::models::enums::versions::v20230925::inventory_state::InventoryStateV20230925;
 
 /// Represents the quantity of an item variation that is physically present at a specific location, verified by a seller or a seller's employee.
 ///

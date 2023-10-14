@@ -3,7 +3,6 @@
 use serde::{Deserialize, Serialize};
 
 use crate::api::models::enums::versions::v20230925::catalog_modifier_list_selection_type::CatalogModifierListSelectionTypeV20230925;
-
 use crate::api::models::objects::versions::v20230925::catalog_object::CatalogObjectV20230925;
 
 /// A list of modifiers applicable to items at the time of sale.

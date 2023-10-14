@@ -2,9 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{catalog_pricing_type::CatalogPricingTypeV20230925, inventory_alert_type::InventoryAlertTypeV20230925};
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::{
+    catalog_pricing_type::CatalogPricingTypeV20230925, inventory_alert_type::InventoryAlertTypeV20230925,
+};
 
 /// Price and inventory alerting overrides for a CatalogItemVariation at a specific Location.
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -2,9 +2,14 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{location_capability::LocationCapabilityV20230925, location_status::LocationStatusV20230925, country::CountryV20230925, currency::CurrencyV20230925, location_type::LocationTypeV20230925};
-
-use super::{address::AddressV20230925, business_hours::BusinessHoursV20230925, coordinates::CoordinatesV20230925, tax_ids::TaxIdsV20230925};
+use super::{
+    address::AddressV20230925, business_hours::BusinessHoursV20230925, coordinates::CoordinatesV20230925,
+    tax_ids::TaxIdsV20230925,
+};
+use crate::api::models::enums::versions::v20230925::{
+    country::CountryV20230925, currency::CurrencyV20230925, location_capability::LocationCapabilityV20230925,
+    location_status::LocationStatusV20230925, location_type::LocationTypeV20230925,
+};
 
 /// Represents one of a business' [locations](https://developer.squareup.com/docs/locations-api).
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -4,9 +4,12 @@ use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{order_service_charge_type::OrderServiceChargeTypeV20230925, order_service_charge_treatment_type::OrderServiceChargeTreatmentTypeV20230925, order_service_charge_scope::OrderServiceChargeScopeV20230925};
-
 use super::{money::MoneyV20230925, order_line_item_applied_tax::OrderLineItemAppliedTaxV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    order_service_charge_scope::OrderServiceChargeScopeV20230925,
+    order_service_charge_treatment_type::OrderServiceChargeTreatmentTypeV20230925,
+    order_service_charge_type::OrderServiceChargeTypeV20230925,
+};
 
 /// Represents a service charge applied to an order.
 #[derive(Debug, Clone, Serialize, Deserialize)]

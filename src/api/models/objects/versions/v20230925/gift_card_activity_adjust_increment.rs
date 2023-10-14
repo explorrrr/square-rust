@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::gift_card_activity_adjust_increment_reason::GiftCardActivityAdjustIncrementReasonV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::gift_card_activity_adjust_increment_reason::GiftCardActivityAdjustIncrementReasonV20230925;
 
 /// Represents details about an ADJUST_INCREMENT [gift card activity type](https://developer.squareup.com/reference/square/objects/GiftCardActivityType).
 #[derive(Debug, Clone, Serialize, Deserialize)]

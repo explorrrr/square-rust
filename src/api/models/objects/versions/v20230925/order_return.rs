@@ -2,7 +2,12 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{order_return_line_item::OrderReturnLineItemV20230925, order_return_service_charge::OrderReturnServiceChargeV20230925, order_return_tax::OrderReturnTaxV20230925, order_return_discount::OrderReturnDiscountV20230925, order_rounding_adjustment::OrderRoundingAdjustmentV20230925, order_money_amounts::OrderMoneyAmountsV20230925};
+use super::{
+    order_money_amounts::OrderMoneyAmountsV20230925, order_return_discount::OrderReturnDiscountV20230925,
+    order_return_line_item::OrderReturnLineItemV20230925,
+    order_return_service_charge::OrderReturnServiceChargeV20230925, order_return_tax::OrderReturnTaxV20230925,
+    order_rounding_adjustment::OrderRoundingAdjustmentV20230925,
+};
 
 /// The set of line items, service charges, taxes, discounts, tips, and other items being returned in an order.
 #[derive(Debug, Clone, Serialize, Deserialize)]

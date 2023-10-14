@@ -1,10 +1,10 @@
 //! BankAccountPaymentDetails
 
-use crate::api::models::objects::versions::v20230925::ach_details::ACHDetailsV20230925;
-use crate::api::models::objects::error::SquareError;
-use crate::api::models::enums::versions::v20230925::country::CountryV20230925;
-
 use serde::{Deserialize, Serialize};
+
+use crate::api::models::enums::versions::v20230925::country::CountryV20230925;
+use crate::api::models::objects::error::SquareError;
+use crate::api::models::objects::versions::v20230925::ach_details::ACHDetailsV20230925;
 
 /// Additional details about BANK_ACCOUNT type payments.
 #[derive(Debug, Clone, Serialize, Deserialize)]

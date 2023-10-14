@@ -2,9 +2,11 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    address::AddressV20230925, customer_preferences::CustomerPreferencesV20230925,
+    customer_tax_ids::CustomerTaxIdsV20230925,
+};
 use crate::api::models::enums::versions::v20230925::customer_creation_source::CustomerCreationSourceV20230925;
-
-use super::{address::AddressV20230925, customer_preferences::CustomerPreferencesV20230925, customer_tax_ids::CustomerTaxIdsV20230925};
 
 /// Represents a Square customer profile, which can have one or more cards on file associated with it.
 #[derive(Debug, Clone, Serialize, Deserialize)]

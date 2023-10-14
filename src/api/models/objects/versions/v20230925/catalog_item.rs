@@ -2,11 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
+use crate::api::models::enums::versions::v20230925::catalog_item_product_type::CatalogItemProductTypeV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_item_modifier_list_info::CatalogItemModifierListInfoV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_item_option_for_item::CatalogItemOptionForItemV20230925;
-use crate::api::models::enums::versions::v20230925::catalog_item_product_type::CatalogItemProductTypeV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_object::CatalogObjectV20230925;
-
 
 /// A [CatalogObject](https://developer.squareup.com/reference/square/objects/CatalogObject) instance of the `ITEM` type, also referred to as an item, in the catalog.
 #[derive(Debug, Clone, Serialize, Deserialize)]

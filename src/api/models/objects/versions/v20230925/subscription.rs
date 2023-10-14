@@ -2,9 +2,11 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    money::MoneyV20230925, phase::PhaseV20230925, subscription_action::SubscriptionActionV20230925,
+    subscription_source::SubscriptionSourceV20230925,
+};
 use crate::api::models::enums::versions::v20230925::subscription_status::SubscriptionStatusV20230925;
-
-use super::{money::MoneyV20230925, subscription_source::SubscriptionSourceV20230925, subscription_action::SubscriptionActionV20230925, phase::PhaseV20230925};
 
 /// Represents a subscription purchased by a customer.
 ///

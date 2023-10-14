@@ -2,10 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-
 use crate::api::models::enums::versions::v20230925::catalog_discount_modify_tax_basis::CatalogDiscountModifyTaxBasisV20230925;
-use crate::api::models::objects::versions::v20230925::money::MoneyV20230925;
 use crate::api::models::enums::versions::v20230925::catalog_discount_type::CatalogDiscountTypeV20230925;
+use crate::api::models::objects::versions::v20230925::money::MoneyV20230925;
 
 /// A discount applicable to items.
 #[derive(Debug, Clone, Serialize, Deserialize)]

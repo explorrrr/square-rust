@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{customer_creation_source::CustomerCreationSourceV20230925, customer_inclusion_exclusion::CustomerInclusionExclusionV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    customer_creation_source::CustomerCreationSourceV20230925,
+    customer_inclusion_exclusion::CustomerInclusionExclusionV20230925,
+};
 
 /// The creation source filter.
 ///

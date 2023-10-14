@@ -2,12 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-
-
+use super::{shift_workday::ShiftWorkdayV20230925, time_range::TimeRangeV20230925};
 use crate::api::models::enums::versions::v20230925::shift_filter_status::ShiftFilterStatusV20230925;
-
-use super::{shift_wage::ShiftWageV20230925, square_break::SquareBreakV20230925, time_range::TimeRangeV20230925, shift_workday::ShiftWorkdayV20230925};
-
 
 /// Defines a filter used in a search for `Shift` records.
 ///

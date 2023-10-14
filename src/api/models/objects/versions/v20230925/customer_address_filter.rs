@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::country::CountryV20230925;
-
 use super::customer_text_filter::CustomerTextFilterV20230925;
+use crate::api::models::enums::versions::v20230925::country::CountryV20230925;
 
 /// The customer address filter.
 ///

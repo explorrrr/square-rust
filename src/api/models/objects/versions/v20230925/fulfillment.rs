@@ -4,9 +4,16 @@ use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{fulfillment_type::FulfillmentTypeV20230925, fulfillment_state::FulfillmentStateV20230925, fulfillment_fulfillment_line_item_application::FulfillmentFulfillmentLineItemApplicationV20230925};
-
-use super::{fulfillment_fulfillment_entry::FulfillmentFulfillmentEntryV20230925, fulfillment_pickup_details::FulfillmentPickupDetailsV20230925, fulfillment_shipment_details::FulfillmentShipmentDetailsV20230925, fulfillment_delivery_details::FulfillmentDeliveryDetailsV20230925};
+use super::{
+    fulfillment_delivery_details::FulfillmentDeliveryDetailsV20230925,
+    fulfillment_fulfillment_entry::FulfillmentFulfillmentEntryV20230925,
+    fulfillment_pickup_details::FulfillmentPickupDetailsV20230925,
+    fulfillment_shipment_details::FulfillmentShipmentDetailsV20230925,
+};
+use crate::api::models::enums::versions::v20230925::{
+    fulfillment_fulfillment_line_item_application::FulfillmentFulfillmentLineItemApplicationV20230925,
+    fulfillment_state::FulfillmentStateV20230925, fulfillment_type::FulfillmentTypeV20230925,
+};
 
 /// Contains details about how to fulfill this order.
 ///

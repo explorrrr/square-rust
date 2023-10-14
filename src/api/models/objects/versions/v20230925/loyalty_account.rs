@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{loyalty_account_mapping::LoyaltyAccountMappingV20230925, loyalty_account_expiring_point_deadline::LoyaltyAccountExpiringPointDeadlineV20230925};
+use super::{
+    loyalty_account_expiring_point_deadline::LoyaltyAccountExpiringPointDeadlineV20230925,
+    loyalty_account_mapping::LoyaltyAccountMappingV20230925,
+};
 
 /// Describes a loyalty account in a [loyalty program](https://developer.squareup.com/reference/square/objects/LoyaltyProgram).
 ///

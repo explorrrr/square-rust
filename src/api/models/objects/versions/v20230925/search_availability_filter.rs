@@ -2,7 +2,7 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{time_range::TimeRangeV20230925, segment_filter::SegmentFilterV20230925};
+use super::{segment_filter::SegmentFilterV20230925, time_range::TimeRangeV20230925};
 
 /// A query filter to search for buyer-accessible availabilities by.
 #[derive(Debug, Clone, Serialize, Deserialize)]

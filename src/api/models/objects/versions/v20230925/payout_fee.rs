@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::payout_fee_type::PayoutFeeTypeV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::payout_fee_type::PayoutFeeTypeV20230925;
 
 /// Represents a payout fee that can incur as part of a payout.
 #[derive(Debug, Clone, Serialize, Deserialize)]

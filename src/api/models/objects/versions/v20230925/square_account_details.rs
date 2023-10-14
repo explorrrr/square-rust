@@ -2,6 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
+use crate::api::models::objects::error::SquareError;
+
 /// Additional details about Square Account payments.
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct SquareAccountDetailsV20230925 {

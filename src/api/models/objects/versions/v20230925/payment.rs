@@ -2,7 +2,15 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{money::MoneyV20230925, processing_fee::ProcessingFeeV20230925, card_payment_details::CardPaymentDetailsV20230925, cash_payment_details::CashPaymentDetailsV20230925, bank_account_payment_details::BankAccountPaymentDetailsV20230925, external_payment_details::ExternalPaymentDetailsV20230925, digital_wallet_details::DigitalWalletDetailsV20230925, buy_now_pay_later_details::BuyNowPayLaterDetailsV20230925, square_account_details::SquareAccountDetailsV20230925, risk_evaluation::RiskEvaluationV20230925, address::AddressV20230925, device_details::DeviceDetailsV20230925, application_details::ApplicationDetailsV20230925};
+use super::{
+    address::AddressV20230925, application_details::ApplicationDetailsV20230925,
+    bank_account_payment_details::BankAccountPaymentDetailsV20230925,
+    buy_now_pay_later_details::BuyNowPayLaterDetailsV20230925, card_payment_details::CardPaymentDetailsV20230925,
+    cash_payment_details::CashPaymentDetailsV20230925, device_details::DeviceDetailsV20230925,
+    digital_wallet_details::DigitalWalletDetailsV20230925, external_payment_details::ExternalPaymentDetailsV20230925,
+    money::MoneyV20230925, processing_fee::ProcessingFeeV20230925, risk_evaluation::RiskEvaluationV20230925,
+    square_account_details::SquareAccountDetailsV20230925,
+};
 
 /// Represents a payment processed by the Square API.
 #[derive(Debug, Clone, Serialize, Deserialize)]

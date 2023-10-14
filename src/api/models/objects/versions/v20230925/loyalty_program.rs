@@ -2,9 +2,13 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    loyalty_program_accrual_rule::LoyaltyProgramAccrualRuleV20230925,
+    loyalty_program_expiration_policy::LoyaltyProgramExpirationPolicyV20230925,
+    loyalty_program_reward_tier::LoyaltyProgramRewardTierV20230925,
+    loyalty_program_teminology::LoyaltyProgramTerminologyV20230925,
+};
 use crate::api::models::enums::versions::v20230925::loyalty_program_status::LoyaltyProgramStatusV20230925;
-
-use super::{loyalty_program_reward_tier::LoyaltyProgramRewardTierV20230925, loyalty_program_expiration_policy::LoyaltyProgramExpirationPolicyV20230925, loyalty_program_teminology::LoyaltyProgramTerminologyV20230925, loyalty_program_accrual_rule::LoyaltyProgramAccrualRuleV20230925};
 
 /// Represents a Square loyalty program.
 ///

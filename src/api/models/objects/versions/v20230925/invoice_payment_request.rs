@@ -2,10 +2,11 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{invoice_request_type::InvoiceRequestTypeV20230925, invoice_automatic_payment_source::InvoiceAutomaticPaymentSourceV20230925};
-
-use super::{money::MoneyV20230925, invoice_payment_reminder::InvoicePaymentReminderV20230925};
-
+use super::{invoice_payment_reminder::InvoicePaymentReminderV20230925, money::MoneyV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    invoice_automatic_payment_source::InvoiceAutomaticPaymentSourceV20230925,
+    invoice_request_type::InvoiceRequestTypeV20230925,
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct InvoicePaymentRequestV20230925 {

@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{device_attributes::DeviceAttributesV20230925, component::ComponentV20230925, device_status::DeviceStatusV20230925};
+use super::{
+    component::ComponentV20230925, device_attributes::DeviceAttributesV20230925, device_status::DeviceStatusV20230925,
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DeviceV20230925 {

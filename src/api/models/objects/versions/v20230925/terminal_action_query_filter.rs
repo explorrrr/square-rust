@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::terminal_action_action_type::TerminalActionActionTypeV20230925;
-
 use super::time_range::TimeRangeV20230925;
+use crate::api::models::enums::versions::v20230925::terminal_action_action_type::TerminalActionActionTypeV20230925;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TerminalActionQueryFilterV20230925 {

@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{customer_text_filter::CustomerTextFilterV20230925, filter_value::FilterValueV20230925, time_range::TimeRangeV20230925, float_number_range::FloatNumberRangeV20230925, customer_address_filter::CustomerAddressFilterV20230925};
+use super::{
+    customer_address_filter::CustomerAddressFilterV20230925, customer_text_filter::CustomerTextFilterV20230925,
+    filter_value::FilterValueV20230925, float_number_range::FloatNumberRangeV20230925, time_range::TimeRangeV20230925,
+};
 
 /// A type-specific filter used in a [custom attribute filter](https://developer.squareup.com/reference/square/objects/CustomerCustomAttributeFilter) to search based on the value of a customer-related [custom attribute](https://developer.squareup.com/reference/square/objects/CustomAttribute).
 #[derive(Debug, Clone, Serialize, Deserialize)]

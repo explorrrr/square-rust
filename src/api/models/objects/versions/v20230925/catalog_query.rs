@@ -2,16 +2,14 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::objects::versions::v20230925::catalog_query_sorted_attribute::CatalogQuerySortedAttributeV20230925;
-
 use crate::api::models::objects::versions::v20230925::catalog_query_exact::CatalogQueryExactV20230925;
-
 use crate::api::models::objects::versions::v20230925::catalog_query_item_variations_for_item_option_values::CatalogQueryItemVariationsForItemOptionValuesV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_query_items_for_item_options::CatalogQueryItemsForItemOptionsV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_query_items_for_modifier_list::CatalogQueryItemsForModifierListV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_query_prefix::CatalogQueryPrefixV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_query_range::CatalogQueryRangeV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_query_set::CatalogQuerySetV20230925;
+use crate::api::models::objects::versions::v20230925::catalog_query_sorted_attribute::CatalogQuerySortedAttributeV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_query_text::CatalogQueryTextV20230925;
 use crate::api::models::objects::versions::v20230925::catalog_quey_items_for_tax::CatalogQueryItemsForTaxV20230925;
 

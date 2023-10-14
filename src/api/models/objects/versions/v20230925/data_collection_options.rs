@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::data_collection_options_input_type::DataCollectionOptionsInputTypeV20230925;
-
 use super::collected_data::CollectedDataV20230925;
+use crate::api::models::enums::versions::v20230925::data_collection_options_input_type::DataCollectionOptionsInputTypeV20230925;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DataCollectionOptionsV20230925 {

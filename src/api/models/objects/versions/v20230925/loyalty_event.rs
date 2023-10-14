@@ -2,9 +2,16 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    loyalty_event_accumulate_points::LoyaltyEventAccumulatePointsV20230925,
+    loyalty_event_accumulate_promotion_points::LoyaltyEventAccumulatePromotionPointsV20230925,
+    loyalty_event_adjust_points::LoyaltyEventAdjustPointsV20230925,
+    loyalty_event_create_reward::LoyaltyEventCreateRewardV20230925,
+    loyalty_event_delete_reward::LoyaltyEventDeleteRewardV20230925,
+    loyalty_event_expire_points::LoyaltyEventExpirePointsV20230925, loyalty_event_other::LoyaltyEventOtherV20230925,
+    loyalty_event_redeem_reward::LoyaltyEventRedeemRewardV20230925,
+};
 use crate::api::models::enums::versions::v20230925::loyalty_event_source::LoyaltyEventSourceV20230925;
-
-use super::{loyalty_event_accumulate_points::LoyaltyEventAccumulatePointsV20230925, loyalty_event_create_reward::LoyaltyEventCreateRewardV20230925, loyalty_event_redeem_reward::LoyaltyEventRedeemRewardV20230925, loyalty_event_delete_reward::LoyaltyEventDeleteRewardV20230925, loyalty_event_adjust_points::LoyaltyEventAdjustPointsV20230925, loyalty_event_expire_points::LoyaltyEventExpirePointsV20230925, loyalty_event_other::LoyaltyEventOtherV20230925, loyalty_event_accumulate_promotion_points::LoyaltyEventAccumulatePromotionPointsV20230925};
 
 /// Provides information about a loyalty event.
 ///

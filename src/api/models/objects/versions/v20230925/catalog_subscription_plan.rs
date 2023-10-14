@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::objects::versions::v20230925::{subscription_phase::SubscriptionPhaseV20230925, catalog_object::CatalogObjectV20230925};
+use crate::api::models::objects::versions::v20230925::{
+    catalog_object::CatalogObjectV20230925, subscription_phase::SubscriptionPhaseV20230925,
+};
 
 /// Describes a subscription plan.
 ///

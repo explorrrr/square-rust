@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{search_orders_sort_field::SearchOrdersSortFieldV20230925, sort_order::SortOrderV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    search_orders_sort_field::SearchOrdersSortFieldV20230925, sort_order::SortOrderV20230925,
+};
 
 /// Sorting criteria for a SearchOrders request.
 ///

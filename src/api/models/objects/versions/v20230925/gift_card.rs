@@ -2,9 +2,11 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{gift_card_type::GiftCardTypeV20230925, gift_card_gansource::GiftCardGANSourceV20230925, gift_card_status::GiftCardStatusV20230925};
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::{
+    gift_card_gansource::GiftCardGANSourceV20230925, gift_card_status::GiftCardStatusV20230925,
+    gift_card_type::GiftCardTypeV20230925,
+};
 
 /// Represents a Square gift card.
 #[derive(Debug, Clone, Serialize, Deserialize)]

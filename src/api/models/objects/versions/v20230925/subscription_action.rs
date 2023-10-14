@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::subscription_action_type::SubscriptionActionTypeV20230925;
-
 use super::phase::PhaseV20230925;
+use crate::api::models::enums::versions::v20230925::subscription_action_type::SubscriptionActionTypeV20230925;
 
 /// Represents an action as a pending change to a subscription.
 #[derive(Debug, Clone, Serialize, Deserialize)]

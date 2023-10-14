@@ -4,9 +4,10 @@ use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{order_line_item_tax_type::OrderLineItemTaxTypeV20230925, order_line_item_tax_scope::OrderLineItemTaxScopeV20230925};
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::{
+    order_line_item_tax_scope::OrderLineItemTaxScopeV20230925, order_line_item_tax_type::OrderLineItemTaxTypeV20230925,
+};
 
 /// Represents a tax that applies to one or more line item in the order.
 ///

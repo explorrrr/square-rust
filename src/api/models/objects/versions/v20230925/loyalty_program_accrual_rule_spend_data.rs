@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::loyalty_program_accrual_rule_tax_mode::LoyaltyProgramAccrualRuleTaxModeV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::loyalty_program_accrual_rule_tax_mode::LoyaltyProgramAccrualRuleTaxModeV20230925;
 
 /// Represents the details of a loyalty program accrual rule for the `SPEND` accrual type.
 #[derive(Debug, Clone, Serialize, Deserialize)]

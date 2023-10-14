@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{invoice_sort_field::InvoiceSortFieldV20230925, sort_order::SortOrderV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    invoice_sort_field::InvoiceSortFieldV20230925, sort_order::SortOrderV20230925,
+};
 
 /// Identifies the sort field and sort order.
 #[derive(Debug, Clone, Serialize, Deserialize)]

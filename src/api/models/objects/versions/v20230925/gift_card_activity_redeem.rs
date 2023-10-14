@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::gift_card_activity_redeem_status::GiftCardActivityRedeemStatusV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::gift_card_activity_redeem_status::GiftCardActivityRedeemStatusV20230925;
 
 /// Represents details about a REDEEM [gift card activity type](https://developer.squareup.com/reference/square/objects/GiftCardActivityType).
 #[derive(Debug, Clone, Serialize, Deserialize)]

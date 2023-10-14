@@ -2,9 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
+use crate::api::models::objects::error::SquareError;
 use crate::api::models::objects::versions::v20230925::card::CardV20230925;
 use crate::api::models::objects::versions::v20230925::card_payment_timeline::CardPaymentTimelineV20230925;
-use crate::api::models::objects::error::SquareError;
 
 /// Reflects the current status of a card payment.
 ///

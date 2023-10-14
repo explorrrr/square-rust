@@ -1,6 +1,5 @@
 //! GiftCardActivityTransferBalanceFrom
 
-
 use serde::{Deserialize, Serialize};
 
 use super::money::MoneyV20230925;

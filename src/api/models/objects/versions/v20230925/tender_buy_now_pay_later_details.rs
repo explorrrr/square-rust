@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{tender_buy_now_pay_later_details_status::TenderBuyNowPayLaterDetailsStatusV20230925, tender_buy_now_pay_later_details_brand::TenderBuyNowPayLaterDetailsBrandV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    tender_buy_now_pay_later_details_brand::TenderBuyNowPayLaterDetailsBrandV20230925,
+    tender_buy_now_pay_later_details_status::TenderBuyNowPayLaterDetailsStatusV20230925,
+};
 
 /// Represents the details of a tender with type BUY_NOW_PAY_LATER.
 #[derive(Debug, Clone, Serialize, Deserialize)]

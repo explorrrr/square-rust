@@ -2,7 +2,13 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{search_orders_state_filter::SearchOrdersStateFilterV20230925, search_orders_date_time_filter::SearchOrdersDateTimeFilterV20230925, search_orders_fulfillment_filter::SearchOrdersFulfillmentFilterV20230925, search_orders_source_filter::SearchOrdersSourceFilterV20230925, search_orders_customer_filter::SearchOrdersCustomerFilterV20230925};
+use super::{
+    search_orders_customer_filter::SearchOrdersCustomerFilterV20230925,
+    search_orders_date_time_filter::SearchOrdersDateTimeFilterV20230925,
+    search_orders_fulfillment_filter::SearchOrdersFulfillmentFilterV20230925,
+    search_orders_source_filter::SearchOrdersSourceFilterV20230925,
+    search_orders_state_filter::SearchOrdersStateFilterV20230925,
+};
 
 /// Filtering criteria to use for a SearchOrders request.
 ///

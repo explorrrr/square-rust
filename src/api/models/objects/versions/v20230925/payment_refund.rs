@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{destination_details::DestinationDetailsV20230925, money::MoneyV20230925, processing_fee::ProcessingFeeV20230925};
+use super::{
+    destination_details::DestinationDetailsV20230925, money::MoneyV20230925, processing_fee::ProcessingFeeV20230925,
+};
 
 /// Represents a refund of a payment made using Square.
 ///

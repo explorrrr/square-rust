@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{customer_custom_attribute_filter_value::CustomerCustomAttributeFilterValueV20230925, time_range::TimeRangeV20230925};
+use super::{
+    customer_custom_attribute_filter_value::CustomerCustomAttributeFilterValueV20230925, time_range::TimeRangeV20230925,
+};
 
 /// The custom attribute filter.
 ///

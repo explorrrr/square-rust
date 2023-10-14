@@ -2,7 +2,12 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{customer_creation_source_filter::CustomerCreationSourceFilterV20230925, time_range::TimeRangeV20230925, customer_text_filter::CustomerTextFilterV20230925, filter_value::FilterValueV20230925, customer_custom_attribute_filters::CustomerCustomAttributeFiltersV20230925};
+use super::{
+    customer_creation_source_filter::CustomerCreationSourceFilterV20230925,
+    customer_custom_attribute_filters::CustomerCustomAttributeFiltersV20230925,
+    customer_text_filter::CustomerTextFilterV20230925, filter_value::FilterValueV20230925,
+    time_range::TimeRangeV20230925,
+};
 
 /// Represents the filtering criteria in a [search query](https://developer.squareup.com/reference/square/objects/CustomerQuery) that defines how to filter customer profiles returned in [SearchCustomers](https://developer.squareup.com/reference/square/customers-api/search-customers) results.
 #[derive(Debug, Clone, Serialize, Deserialize)]

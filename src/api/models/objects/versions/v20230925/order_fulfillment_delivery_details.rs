@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::order_fulfillment_delivery_details_schedule_type::OrderFulfillmentDeliveryDetailsScheduleTypeV20230925;
-
 use super::order_fulfillment_recipient::OrderFulfillmentRecipientV20230925;
+use crate::api::models::enums::versions::v20230925::order_fulfillment_delivery_details_schedule_type::OrderFulfillmentDeliveryDetailsScheduleTypeV20230925;
 
 /// Describes delivery details of an order fulfillment.
 #[derive(Debug, Clone, Serialize, Deserialize)]

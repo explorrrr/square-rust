@@ -2,7 +2,12 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{order_quantity_unit::OrderQuantityUnitV20230925, order_return_line_item_modifier::OrderReturnLineItemModifierV20230925, order_line_item_applied_tax::OrderLineItemAppliedTaxV20230925, order_line_item_applied_discount::OrderLineItemAppliedDiscountV20230925, money::MoneyV20230925, order_line_item_applied_service_charge::OrderLineItemAppliedServiceChargeV20230925};
+use super::{
+    money::MoneyV20230925, order_line_item_applied_discount::OrderLineItemAppliedDiscountV20230925,
+    order_line_item_applied_service_charge::OrderLineItemAppliedServiceChargeV20230925,
+    order_line_item_applied_tax::OrderLineItemAppliedTaxV20230925, order_quantity_unit::OrderQuantityUnitV20230925,
+    order_return_line_item_modifier::OrderReturnLineItemModifierV20230925,
+};
 
 /// The line item being returned in an order.
 #[derive(Debug, Clone, Serialize, Deserialize)]

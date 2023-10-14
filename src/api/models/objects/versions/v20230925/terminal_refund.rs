@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::action_cancel_reason::ActionCancelReasonV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::action_cancel_reason::ActionCancelReasonV20230925;
 
 /// Represents a payment refund processed by the Square Terminal.
 ///

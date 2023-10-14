@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::order_state::OrderStateV20230925;
-
 use super::order_fulfillment_updated_update::OrderFulfillmentUpdatedUpdateV20230925;
+use crate::api::models::enums::versions::v20230925::order_state::OrderStateV20230925;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct OrderFulfillmentUpdatedV20230925 {

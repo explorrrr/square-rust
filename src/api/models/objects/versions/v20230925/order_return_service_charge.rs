@@ -2,9 +2,12 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{order_service_charge_treatment_type::OrderServiceChargeTreatmentTypeV20230925, order_service_charge_scope::OrderServiceChargeScopeV20230925, order_service_charge_calculation_phase::OrderServiceChargeCalculationPhaseV20230925};
-
 use super::{money::MoneyV20230925, order_line_item_applied_tax::OrderLineItemAppliedTaxV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    order_service_charge_calculation_phase::OrderServiceChargeCalculationPhaseV20230925,
+    order_service_charge_scope::OrderServiceChargeScopeV20230925,
+    order_service_charge_treatment_type::OrderServiceChargeTreatmentTypeV20230925,
+};
 
 /// Represents the service charge applied to the original order.
 #[derive(Debug, Clone, Serialize, Deserialize)]

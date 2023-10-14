@@ -3,14 +3,13 @@
 use serde::{Deserialize, Serialize};
 
 use crate::api::models::enums::versions::v20230925::catalog_custom_attribute_definition_app_visibility::CatalogCustomAttributeDefinitionAppVisibilityV20230925;
-use crate::api::models::objects::versions::v20230925::catalog_custom_attribute_definition_number_config::CatalogCustomAttributeDefinitionNumberConfigV20230925;
-use crate::api::models::objects::versions::v20230925::catalog_custom_attribute_definition_selection_config::CatalogCustomAttributeDefinitionSelectionConfigV20230925;
 use crate::api::models::enums::versions::v20230925::catalog_custom_attribute_definition_seller_visibility::CatalogCustomAttributeDefinitionSellerVisibilityV20230925;
-use crate::api::models::objects::versions::v20230925::catalog_custom_attribute_definition_string_config::CatalogCustomAttributeDefinitionStringConfigV20230925;
 use crate::api::models::enums::versions::v20230925::catalog_custom_attribute_definition_type::CatalogCustomAttributeDefinitionTypeV20230925;
 use crate::api::models::enums::versions::v20230925::catalog_object_type::CatalogObjectTypeV20230925;
+use crate::api::models::objects::versions::v20230925::catalog_custom_attribute_definition_number_config::CatalogCustomAttributeDefinitionNumberConfigV20230925;
+use crate::api::models::objects::versions::v20230925::catalog_custom_attribute_definition_selection_config::CatalogCustomAttributeDefinitionSelectionConfigV20230925;
+use crate::api::models::objects::versions::v20230925::catalog_custom_attribute_definition_string_config::CatalogCustomAttributeDefinitionStringConfigV20230925;
 use crate::api::models::objects::versions::v20230925::source_application::SourceApplicationV20230925;
-
 
 /// Contains information defining a custom attribute.
 ///

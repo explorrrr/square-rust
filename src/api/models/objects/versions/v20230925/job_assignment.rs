@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::job_assignment_pay_type::JobAssignmentPayTypeV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::job_assignment_pay_type::JobAssignmentPayTypeV20230925;
 
 /// An object describing a job that a team member is assigned to.
 #[derive(Debug, Clone, Serialize, Deserialize)]

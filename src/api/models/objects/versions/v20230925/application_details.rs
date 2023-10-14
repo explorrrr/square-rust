@@ -1,10 +1,8 @@
 //! ApplicationDetails
 
+use serde::{Deserialize, Serialize};
 
 use crate::api::models::enums::versions::v20230925::application_details_external_square_product::ApplicationDetailsExternalSquareProcutV20230925;
-
-
-use serde::{Deserialize, Serialize};
 
 /// Details about the application that took the payment.
 #[derive(Debug, Clone, Serialize, Deserialize)]

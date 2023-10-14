@@ -2,9 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::objects::versions::v20230925::business_appointment_settings::BusinessAppointmentSettingsV20230925;
 use crate::api::models::enums::versions::v20230925::business_booking_profile_booking_policy::BusinessBookingProfileBookingPolicyV20230925;
 use crate::api::models::enums::versions::v20230925::business_booking_profile_customer_timezone_choice::BusinessBookingProfileCustomerTimezoneChoiceV20230925;
+use crate::api::models::objects::versions::v20230925::business_appointment_settings::BusinessAppointmentSettingsV20230925;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct BusinessBookingProfileV20230925 {

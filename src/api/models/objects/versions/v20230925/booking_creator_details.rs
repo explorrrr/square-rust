@@ -1,6 +1,7 @@
 //! BookingCreatorDetails
 
 use serde::{Deserialize, Serialize};
+
 use crate::api::models::enums::versions::v20230925::booking_creator_details_creator_type::BookingCreatorDetailsCreatorTypeV20230925;
 
 /// Information about a booking creator.

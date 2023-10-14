@@ -2,9 +2,15 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{action_cancel_reason::ActionCancelReasonV20230925, terminal_action_action_type::TerminalActionActionTypeV20230925};
-
-use super::{qr_code_options::QrCodeOptionsV20230925, save_card_options::SaveCardOptionsV20230925, signature_options::SignatureOptionsV20230925, confirmation_options::ConfirmationOptionsV20230925, receipt_options::ReceiptOptionsV20230925, data_collection_options::DataCollectionOptionsV20230925, select_options::SelectOptionsV20230925, device_metadata::DeviceMetadataV20230925};
+use super::{
+    confirmation_options::ConfirmationOptionsV20230925, data_collection_options::DataCollectionOptionsV20230925,
+    device_metadata::DeviceMetadataV20230925, qr_code_options::QrCodeOptionsV20230925,
+    receipt_options::ReceiptOptionsV20230925, save_card_options::SaveCardOptionsV20230925,
+    select_options::SelectOptionsV20230925, signature_options::SignatureOptionsV20230925,
+};
+use crate::api::models::enums::versions::v20230925::{
+    action_cancel_reason::ActionCancelReasonV20230925, terminal_action_action_type::TerminalActionActionTypeV20230925,
+};
 
 /// Represents an action processed by the Square Terminal.
 #[derive(Debug, Clone, Serialize, Deserialize)]

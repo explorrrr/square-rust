@@ -2,9 +2,14 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{invoice_delivery_method::InvoiceDeliveryMethodV20230925, invoice_status::InvoiceStatusV20230925};
-
-use super::{invoice_recipient::InvoiceRecipientV20230925, money::MoneyV20230925, invoice_accepted_payment_methods::InvoiceAcceptedPaymentMethodsV20230925, invoice_custom_field::InvoiceCustomFieldV20230925, invoice_payment_request::InvoicePaymentRequestV20230925};
+use super::{
+    invoice_accepted_payment_methods::InvoiceAcceptedPaymentMethodsV20230925,
+    invoice_custom_field::InvoiceCustomFieldV20230925, invoice_payment_request::InvoicePaymentRequestV20230925,
+    invoice_recipient::InvoiceRecipientV20230925, money::MoneyV20230925,
+};
+use crate::api::models::enums::versions::v20230925::{
+    invoice_delivery_method::InvoiceDeliveryMethodV20230925, invoice_status::InvoiceStatusV20230925,
+};
 
 /// Stores information about an invoice.
 ///

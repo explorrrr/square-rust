@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::refund_status::RefundStatusV20230925;
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::refund_status::RefundStatusV20230925;
 
 /// Represents a refund processed for a Square transaction.
 #[derive(Debug, Clone, Serialize, Deserialize)]

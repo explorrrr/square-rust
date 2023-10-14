@@ -2,9 +2,24 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    gift_card_activity_activate::GiftCardActivityActivateV20230925,
+    gift_card_activity_adjust_decrement::GiftCardActivityAdjustDecrementV20230925,
+    gift_card_activity_adjust_increment::GiftCardActivityAdjustIncrementV20230925,
+    gift_card_activity_block::GiftCardActivityBlockV20230925,
+    gift_card_activity_clear_balance::GiftCardActivityClearBalanceV20230925,
+    gift_card_activity_deactivate::GiftCardActivityDeactivateV20230925,
+    gift_card_activity_import::GiftCardActivityImportV20230925,
+    gift_card_activity_import_reversal::GiftCardActivityImportReversalV20230925,
+    gift_card_activity_load::GiftCardActivityLoadV20230925, gift_card_activity_redeem::GiftCardActivityRedeemV20230925,
+    gift_card_activity_refund::GiftCardActivityRefundV20230925,
+    gift_card_activity_transfer_balance_from::GiftCardActivityTransferBalanceFromV20230925,
+    gift_card_activity_transfer_balance_to::GiftCardActivityTransferBalanceToV20230925,
+    gift_card_activity_unblock::GiftCardActivityUnblockV20230925,
+    gift_card_activity_unlinked_activity_refund::GiftCardActivityUnlinkedActivityRefundV20230925,
+    money::MoneyV20230925,
+};
 use crate::api::models::enums::versions::v20230925::gift_card_activity_type::GiftCardActivityTypeV20230925;
-
-use super::{money::MoneyV20230925, gift_card_activity_load::GiftCardActivityLoadV20230925, gift_card_activity_activate::GiftCardActivityActivateV20230925, gift_card_activity_redeem::GiftCardActivityRedeemV20230925, gift_card_activity_clear_balance::GiftCardActivityClearBalanceV20230925, gift_card_activity_deactivate::GiftCardActivityDeactivateV20230925, gift_card_activity_adjust_increment::GiftCardActivityAdjustIncrementV20230925, gift_card_activity_adjust_decrement::GiftCardActivityAdjustDecrementV20230925, gift_card_activity_refund::GiftCardActivityRefundV20230925, gift_card_activity_unlinked_activity_refund::GiftCardActivityUnlinkedActivityRefundV20230925, gift_card_activity_import::GiftCardActivityImportV20230925, gift_card_activity_block::GiftCardActivityBlockV20230925, gift_card_activity_unblock::GiftCardActivityUnblockV20230925, gift_card_activity_import_reversal::GiftCardActivityImportReversalV20230925, gift_card_activity_transfer_balance_to::GiftCardActivityTransferBalanceToV20230925, gift_card_activity_transfer_balance_from::GiftCardActivityTransferBalanceFromV20230925};
 
 /// Represents an action performed on a [gift card](https://developer.squareup.com/reference/square/objects/GiftCard) that affects its state or balance.
 ///

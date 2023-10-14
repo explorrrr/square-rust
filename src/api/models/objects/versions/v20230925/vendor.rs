@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::vendor_status::VendorStatusV20230925;
-
 use super::{address::AddressV20230925, vendor_contact::VendorContactV20230925};
+use crate::api::models::enums::versions::v20230925::vendor_status::VendorStatusV20230925;
 
 /// Represents a supplier to a seller.
 #[derive(Debug, Clone, Serialize, Deserialize)]

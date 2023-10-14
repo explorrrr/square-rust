@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::subscription_cadence::SubscriptionCadenceV20230925;
-
 use super::{money::MoneyV20230925, subscription_pricing::SubscriptionPricingV20230925};
+use crate::api::models::enums::versions::v20230925::subscription_cadence::SubscriptionCadenceV20230925;
 
 /// Describes a phase in a subscription plan variation.
 ///

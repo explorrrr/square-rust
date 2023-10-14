@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{product_type::ProductTypeV20230925, device_code_status::DeviceCodeStatusV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    device_code_status::DeviceCodeStatusV20230925, product_type::ProductTypeV20230925,
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DeviceCodeV20230925 {

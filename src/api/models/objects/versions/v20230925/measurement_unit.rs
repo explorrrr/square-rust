@@ -2,9 +2,13 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{measurement_unit_area::MeasurementUnitAreaV20230925, measurement_unit_length::MeasurementUnitLengthV20230925, measurement_unit_volume::MeasurementUnitVolumeV20230925, measurement_unit_weight::MeasurementUnitWeightV20230925, measurement_unit_generic::MeasurementUnitGenericV20230925, measurement_unit_time::MeasurementUnitTimeV20230925, measurement_unit_unit_type::MeasurementUnitUnitTypeV20230925};
-
 use super::measurement_unit_custom::MeasurementUnitCustomV20230925;
+use crate::api::models::enums::versions::v20230925::{
+    measurement_unit_area::MeasurementUnitAreaV20230925, measurement_unit_generic::MeasurementUnitGenericV20230925,
+    measurement_unit_length::MeasurementUnitLengthV20230925, measurement_unit_time::MeasurementUnitTimeV20230925,
+    measurement_unit_unit_type::MeasurementUnitUnitTypeV20230925,
+    measurement_unit_volume::MeasurementUnitVolumeV20230925, measurement_unit_weight::MeasurementUnitWeightV20230925,
+};
 
 /// Represents a unit of measurement to use with a quantity, such as ounces or inches.
 ///

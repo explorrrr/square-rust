@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{search_vendors_request_sort_field::SearchVendorsRequestSortFieldV20230925, sort_order::SortOrderV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    search_vendors_request_sort_field::SearchVendorsRequestSortFieldV20230925, sort_order::SortOrderV20230925,
+};
 
 /// Defines a sorter used to sort results from [SearchVendors](https://developer.squareup.com/reference/square/vendors-api/search-vendors).
 #[derive(Debug, Clone, Serialize, Deserialize)]

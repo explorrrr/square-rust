@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::objects::versions::v20230925::{custom_field::CustomFieldV20230925, accepted_payment_methods::AcceptedPaymentMethodsV20230925, money::MoneyV20230925, shipping_fee::ShippingFeeV20230925};
+use crate::api::models::objects::versions::v20230925::{
+    accepted_payment_methods::AcceptedPaymentMethodsV20230925, custom_field::CustomFieldV20230925,
+    money::MoneyV20230925, shipping_fee::ShippingFeeV20230925,
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct CheckoutOptionsV20230925 {

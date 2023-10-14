@@ -1,13 +1,25 @@
 //! CatalogObject
 
 use std::collections::HashMap;
+
 use serde::{Deserialize, Serialize};
 
 use crate::api::models::enums::versions::v20230925::catalog_object_type::CatalogObjectTypeV20230925;
-
-use crate::api::models::objects::versions::v20230925::{catalog_custom_attribute_value::CatalogCustomAttributeValueV20230925, catalog_v1_id::CatalogV1IdV20230925, catalog_item::CatalogItemV20230925, catalog_category::CatalogCategoryV20230925, catalog_item_variation::CatalogItemVariationV20230925, catalog_discount::CatalogDiscountV20230925, catalog_modifier_list::CatalogModifierListV20230925, catalog_modifier::CatalogModifierV20230925, catalog_time_period::CatalogTimePeriodV20230925, catalog_product_set::CatalogProductSetV20230925, catalog_pricing_rule::CatalogPricingRuleV20230925, catalog_image::CatalogImageV20230925, catalog_measurement_unit::CatalogMeasurementUnitV20230925, catalog_subscription_plan::CatalogSubscriptionPlanV20230925, catalog_item_option::CatalogItemOptionV20230925, catalog_item_option_value::CatalogItemOptionValueV20230925, catalog_custom_attribute_definition::CatalogCustomAttributeDefinitionV20230925, catalog_quick_amounts_settings::CatalogQuickAmountsSettingsV20230925, catalog_subscription_plan_variation::CatalogSubscriptionPlanVariationV20230925};
-
 use crate::api::models::objects::versions::v20230925::catalog_tax::CatalogTaxV20230925;
+use crate::api::models::objects::versions::v20230925::{
+    catalog_category::CatalogCategoryV20230925,
+    catalog_custom_attribute_definition::CatalogCustomAttributeDefinitionV20230925,
+    catalog_custom_attribute_value::CatalogCustomAttributeValueV20230925, catalog_discount::CatalogDiscountV20230925,
+    catalog_image::CatalogImageV20230925, catalog_item::CatalogItemV20230925,
+    catalog_item_option::CatalogItemOptionV20230925, catalog_item_option_value::CatalogItemOptionValueV20230925,
+    catalog_item_variation::CatalogItemVariationV20230925, catalog_measurement_unit::CatalogMeasurementUnitV20230925,
+    catalog_modifier::CatalogModifierV20230925, catalog_modifier_list::CatalogModifierListV20230925,
+    catalog_pricing_rule::CatalogPricingRuleV20230925, catalog_product_set::CatalogProductSetV20230925,
+    catalog_quick_amounts_settings::CatalogQuickAmountsSettingsV20230925,
+    catalog_subscription_plan::CatalogSubscriptionPlanV20230925,
+    catalog_subscription_plan_variation::CatalogSubscriptionPlanVariationV20230925,
+    catalog_time_period::CatalogTimePeriodV20230925, catalog_v1_id::CatalogV1IdV20230925,
+};
 
 /// The wrapper object for the catalog entries of a given object type.
 ///

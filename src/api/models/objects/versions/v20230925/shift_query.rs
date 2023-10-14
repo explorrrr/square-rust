@@ -2,7 +2,7 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{shift_sort::ShiftSortV20230925, shift_filter::ShiftFilterV20230925};
+use super::{shift_filter::ShiftFilterV20230925, shift_sort::ShiftSortV20230925};
 
 /// The parameters of a Shift search query, which includes filter and sort options.
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::shift_status::ShiftStatusV20230925;
-
 use super::{shift_wage::ShiftWageV20230925, square_break::SquareBreakV20230925};
+use crate::api::models::enums::versions::v20230925::shift_status::ShiftStatusV20230925;
 
 /// A record of the hourly rate, start, and end times for a single work shift for an employee.
 ///

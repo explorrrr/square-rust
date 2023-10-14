@@ -4,9 +4,11 @@ use std::collections::HashMap;
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{order_line_item_discount_type::OrderLineItemDiscountTypeV20230925, order_line_item_discount_scope::OrderLineItemDiscountScopeV20230925};
-
 use super::money::MoneyV20230925;
+use crate::api::models::enums::versions::v20230925::{
+    order_line_item_discount_scope::OrderLineItemDiscountScopeV20230925,
+    order_line_item_discount_type::OrderLineItemDiscountTypeV20230925,
+};
 
 /// Represents a discount that applies to one or more line items in an order.
 ///

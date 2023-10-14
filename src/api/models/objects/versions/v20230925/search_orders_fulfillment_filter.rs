@@ -2,7 +2,9 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::{fulfillment_type::FulfillmentTypeV20230925, fulfillment_state::FulfillmentStateV20230925};
+use crate::api::models::enums::versions::v20230925::{
+    fulfillment_state::FulfillmentStateV20230925, fulfillment_type::FulfillmentTypeV20230925,
+};
 
 /// Filter based on order fulfillment information.
 #[derive(Debug, Clone, Serialize, Deserialize)]

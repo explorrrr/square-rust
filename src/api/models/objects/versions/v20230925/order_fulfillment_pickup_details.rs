@@ -2,9 +2,11 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    order_fulfillment_pickup_details_curbside_pickup_details::OrderFulfillmentPickupDetailsCurbsidePickupDetailsV20230925,
+    order_fulfillment_recipient::OrderFulfillmentRecipientV20230925,
+};
 use crate::api::models::enums::versions::v20230925::order_fulfillment_pickup_details_schedule_type::OrderFulfillmentPickupDetailsScheduleTypeV20230925;
-
-use super::{order_fulfillment_recipient::OrderFulfillmentRecipientV20230925, order_fulfillment_pickup_details_curbside_pickup_details::OrderFulfillmentPickupDetailsCurbsidePickupDetailsV20230925};
 
 /// Contains details necessary to fulfill a pickup order.
 #[derive(Debug, Clone, Serialize, Deserialize)]

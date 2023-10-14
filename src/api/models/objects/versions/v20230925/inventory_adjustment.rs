@@ -2,9 +2,11 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    inventory_adjustment_group::InventoryAdjustmentGroupV20230925, money::MoneyV20230925,
+    source_application::SourceApplicationV20230925,
+};
 use crate::api::models::enums::versions::v20230925::inventory_state::InventoryStateV20230925;
-
-use super::{money::MoneyV20230925, source_application::SourceApplicationV20230925, inventory_adjustment_group::InventoryAdjustmentGroupV20230925};
 
 /// Represents a change in state or quantity of product inventory at a particular time and location.
 #[derive(Debug, Clone, Serialize, Deserialize)]

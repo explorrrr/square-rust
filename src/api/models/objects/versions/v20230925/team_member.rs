@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::team_member_status::TeamMemberStatusV20230925;
-
 use super::team_member_assigned_locations::TeamMemberAssignedLocationsV20230925;
+use crate::api::models::enums::versions::v20230925::team_member_status::TeamMemberStatusV20230925;
 
 /// A record representing an individual team member for a business.
 #[derive(Debug, Clone, Serialize, Deserialize)]

@@ -2,9 +2,8 @@
 
 use serde::{Deserialize, Serialize};
 
-use crate::api::models::enums::versions::v20230925::dispute_evidence_type::DisputeEvidenceTypeV20230925;
-
 use super::dispute_evidence_file::DisputeEvidenceFileV20230925;
+use crate::api::models::enums::versions::v20230925::dispute_evidence_type::DisputeEvidenceTypeV20230925;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct DisputeEvidenceV20230925 {

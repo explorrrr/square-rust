@@ -2,9 +2,11 @@
 
 use serde::{Deserialize, Serialize};
 
+use super::{
+    catalog_measurement_unit::CatalogMeasurementUnitV20230925, inventory_adjustment::InventoryAdjustmentV20230925,
+    inventory_physical_count::InventoryPhysicalCountV20230925, inventory_transfer::InventoryTransferV20230925,
+};
 use crate::api::models::enums::versions::v20230925::inventory_change_type::InventoryChangeTypeV20230925;
-
-use super::{inventory_physical_count::InventoryPhysicalCountV20230925, inventory_adjustment::InventoryAdjustmentV20230925, inventory_transfer::InventoryTransferV20230925, catalog_measurement_unit::CatalogMeasurementUnitV20230925};
 
 /// Represents a single physical count, inventory, adjustment, or transfer that is part of the history of inventory changes for a particular [CatalogObject](https://developer.squareup.com/reference/square/objects/CatalogObject) instance.
 #[derive(Debug, Clone, Serialize, Deserialize)]

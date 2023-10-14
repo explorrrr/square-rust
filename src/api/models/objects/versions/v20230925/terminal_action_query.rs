@@ -2,7 +2,10 @@
 
 use serde::{Deserialize, Serialize};
 
-use super::{terminal_action_query_filter::TerminalActionQueryFilterV20230925, terminal_action_query_sort::TerminalActionQuerySortV20230925};
+use super::{
+    terminal_action_query_filter::TerminalActionQueryFilterV20230925,
+    terminal_action_query_sort::TerminalActionQuerySortV20230925,
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct TerminalActionQueryV20230925 {
